@@ -1,61 +1,81 @@
-// Responsive menu toggle
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
-menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('open');
-});
+import { courseList } from './courses.js';
 
-// Dynamic copyright year
-document.getElementById('year').textContent = new Date().getFullYear();
 
-// Dynamic last modified
-document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
 
-// Course array
-const courses = [
-  { code: "WDD 130", name: "Web Fundamentals", credits: 3, completed: true },
-  { code: "CSE 110", name: "Introduction to Programming", credits: 2, completed: true },
-  { code: "CSE 111", name: "Programming with Functions", credits: 2, completed: false },
-  { code: "CSE 210", name: "Programming with Classes", credits: 2, completed: false },
-  { code: "WDD 131", name: "Dynamic Web Fundamentals", credits: 3, completed: false },
-  { code: "WDD 231", name: "Front-end Development I", credits: 3, completed: false }
-];
+//[
+  //{ code: 'CSE 110', name: 'Introduction to Programming', credits: 3, category: 'CSE', completed: true },
+  //{ code: 'CSE 111', name: 'Programming with Functions', credits: 3, category: 'CSE', completed: true },
+  //{ code: 'CSE 210', name: 'Object-Oriented Programming', credits: 3, category: 'CSE', completed: false },
+ // { code: 'WDD 130', name: 'Web Fundamentals', credits: 3, category: 'WDD', completed: true },
+ // { code: 'WDD 131', name: 'Responsive Web Design', credits: 3, category: 'WDD', completed: false },
+ // { code: 'WDD 231', name: 'Front-End Development', credits: 3, category: 'WDD', completed: false }
+//];
 
-// DOM elements
-const courseContainer = document.querySelector('.courses');
-const creditDisplay = document.createElement('p');
-courseContainer.insertAdjacentElement('afterend', creditDisplay);
+const coursesContainer = document.querySelector('.courses');
+const creditDisplay = document.getElementById('total-credits');
+creditDisplay.style.textAlign = 'center';
+creditDisplay.style.marginTop = '1rem';
+coursesContainer.parentNode.appendChild(creditDisplay);
 
-// Display courses
-function displayCourses(courseList) {
-  courseContainer.innerHTML = ''; // clear
-  let totalCredits = courseList.reduce((sum, course) => sum + course.credits, 0);
-  
-  courseList.forEach(course => {
+// Function to display courses dynamically
+function displayCourses(filteredCourses) {
+  coursesContainer.innerHTML = ''; // Clear previous course cards
+  let totalCredits = 0;
+
+  filteredCourses.forEach(course => {
     const div = document.createElement('div');
     div.classList.add('course');
-    div.textContent = `${course.code}: ${course.name} (${course.credits} credits)`;
+    if (course.category && typeof course.category === 'string') {
+    div.classList.add(course.category.toLowerCase());
+
+    // Apply different style if the course is completed
     if (course.completed) {
-      div.classList.add('completed'); // different style for completed
+      div.classList.add('completed'); // add 'completed' class to indicate completion
     }
-    courseContainer.appendChild(div);
-  });
+
+    // Create inner HTML for each course card
+    div.innerHTML = `
+      <strong>${course.code}</strong><br>
+      ${course.name}<br>
+      ${course.credits} credits
+    `;
+    coursesContainer.appendChild(div);
+
+    // Accumulate total credits of displayed courses
+      totalCredits += course.credits;
+      }
+    });
   
-  creditDisplay.textContent = `Total Credits: ${totalCredits}`;
+    // Display the total credits dynamically
+        creditDisplay.textContent = `Total Credits: ${totalCredits}`;
+    }
+ 
+
+// Function to filter courses based on category (e.g., CSE, WDD, All)
+function filterCourses(category) {
+  let filtered;
+  
+  // If the category is 'all', display all courses
+  if (category === 'all') {
+    filtered = courseList;
+  } else {
+    // Filter courses by the selected category
+    filtered = courseList.filter(course => course.category.toLowerCase() === category.toLowerCase());
+  }
+
+  // Display the filtered courses
+  displayCourses(filtered);
 }
 
-// Initial display: All courses
-displayCourses(courses);
+// Initial display
+displayCourses(courseList);
 
-// Filter buttons
-document.querySelectorAll('.filter-buttons button').forEach(button => {
-  button.addEventListener('click', () => {
-    const filter = button.textContent.toLowerCase();
-    if (filter === 'all') {
-      displayCourses(courses);
-    } else {
-      const filtered = courses.filter(course => course.code.startsWith(filter.toUpperCase()));
-      displayCourses(filtered);
-    }
-  });
-});
+// Button listeners
+document.querySelector('button[data-filter="all"]').addEventListener('click', () => filterCourses('all'));
+document.querySelector('button[data-filter="cse"]').addEventListener('click', () => filterCourses('cse'));
+document.querySelector('button[data-filter="wdd"]').addEventListener('click', () => filterCourses('wdd'));
+
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', () => {navMenu.classList.toggle('show')});

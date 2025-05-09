@@ -3,22 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rubia M. Francesco</title>
-  <meta name="description" content="Personal portfolio page for Anyalechi Chidiebere.">
-  <meta name="author" content="Anyalechi Chidiebere">
+  <title>Anyalechi Chidiebere</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
-  <script src="scripts/script.js" defer></script> <!-- 👈 script referenced here -->
+  <script type= "module" src="scripts/script.js" defer></script>
 
 </head>
 <body>
-
   <header>
-    <img src="images/anyalechi.webp" alt="chidiebere's Photo">
-    <span>Anyalechi Chidiebere</span>
-    <button id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+    <div class="header-left">
+      <img src="images\anyalechi.webp" alt="Profile Picture">
+      <h1>Anyalechi Chidiebere</h1>
+    </div>
+    <div class="hamburger" id="hamburger">&#9776;</div> <!-- hamburger icon -->
   </header>
-
   <nav id="nav-menu">
     <a href="#" class="active">Home</a>
     <a href="#">Chamber</a>
@@ -26,39 +24,33 @@
     <a href="#">GitHub Profile</a>
     <a href="#">LinkedIn</a>
   </nav>
-
+    
   <main>
-    <h1>Home</h1>
-
-    <div class="main-grid">
-      <section class = "card">
-        <div class="coursework">
-          <h2>Course Work</h2>
-          <ul>
-            <li> . </li>
-            <li> . </li>
-            <li> . </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class = "card">
-        <div class ="Toloria, Madagascar">
-          <h2>Toloria, Madagascar</h2>
-        <figure>
-          <img src="images/baobab.webp" alt="Baobab Trees">
-          <figcaption>Baobab Trees</figcaption>
-        </figure>
-      </section>
+    <h2>Home</h2>
+    <div class="content">
+      <div class="card">
+        <div class="card-header">Course Work</div>
+        <ul>
+          <li>.</li>
+          <li>.</li>
+          <li>.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">Toloria, Madagascar</div>
+        <img src="images/baobab.webp" alt="Baobab Trees">
+        <p>Baobab Trees</p>
+      </div>
     </div>
 
-    <section class ="card">
-      <h2>Web and Computer Programming Certificate</h2>
+    <section class="certificate">
+      <div class="card-header">Web and Computer Programming Certificate</div>
       <div class="filter-buttons">
-        <button onclick="filterCourses('all')">All</button>
-        <button onclick="filterCourses('cse')">CSE</button>
-        <button onclick="filterCourses('wdd')">WDD</button>
+        <button data-filter="all">All</button>
+        <button data-filter="cse">CSE</button>
+        <button data-filter="wdd">WDD</button>
       </div>
+      
       <div class="courses">
         <div class="course cse">CSE 110</div>
         <div class="course wdd">WDD 130</div>
@@ -68,36 +60,14 @@
         <div class="course wdd">WDD 231</div>
       </div>
     </section>
+    <p id ="total-credits"></p></p>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Anyalechi Chidiebere, Nigeria</p>
-    <p id="lastModified"></p>
+    <p>©2025 Anyalechi Chidiebere | Biafra</p>
+    <p>Last Update: 01/01/1970 12:00:00</p>
+    <img src="images/biafra.webp" alt="Biafra Flag" width="40">
   </footer>
 
-  <script>
-    // Dynamic year
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Dynamic last modified
-    document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
-    // Menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-    });
-    // Filter function
-    function filterCourses(category) {
-      const courses = document.querySelectorAll('.course');
-      courses.forEach(course => {
-        if (category === 'all' || course.classList.contains(category)) {
-          course.style.display = 'block';
-        } else {
-          course.style.display = 'none';
-        }
-      });
-    }
-  </script>
-
-</body>
+  </body>
 </html>

@@ -40,6 +40,12 @@ header h1 {
   font-size: 1.4rem;
 }
 
+nav {
+  background: black;
+  display: flex;
+  justify-content: center;
+}
+
 nav a {
   color: white;
   text-decoration: none;
