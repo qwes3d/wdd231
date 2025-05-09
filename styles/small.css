@@ -1,0 +1,50 @@
+
+
+
+  header, nav, main, footer {
+    padding: 1rem;
+  }
+  
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 0.5rem 0.8rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a.active {
+    background-color: #555;
+  }
+  
+  nav.show {
+    display: flex;
+  }
+  
+  .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  
+  
+  .course {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .course.completed {
+    background-color: #e0ffe0;
+    border-color: green;
+     color: #2A3D66;
+}
+  
+
+  

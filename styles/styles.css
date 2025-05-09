@@ -44,15 +44,7 @@ header h1 {
 nav {
   background: black;
   display: flex;
-  justify-content: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 10px;
-  padding: 0.5rem 0.8rem;
-  transition: background-color 0.3s ease;
+  justify-content: center; 
 }
 
 nav a:hover {
@@ -131,12 +123,6 @@ h2 {
   background-color: #1f2e4d;
 }
 
-.courses {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.7rem;
-}
 
 .course {
   padding: 15px; 
@@ -168,58 +154,12 @@ ul {
 }
 
 
-/* Initially hide hamburger on large screens */
-.hamburger {
-  font-size: 2rem;
-  cursor: pointer;
-  display: none; /* hide by default */
-  position: relative; /* important for positioning dropdown */
-}
 
 /* Mobile: show hamburger, hide nav */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-  #nav-menu {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 70px; /* adjust based on header height */
-    right: 0;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 999;
-  }
-
-  #nav-menu.show {
-    display: flex;
-  }
-
-  #nav-menu a {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-}
-
-#nav-menu a.active {
-  background-color: #007bff;  /* Blue background */
-  color: white;               /* White text */
-  border-radius: 5px;
-  padding: 5px 10px;
-}
 
 
-.course.completed {
-  border: 2px solid #4CAF50;
-  background-color: #E6F4EA;
-  color: #2A3D66;
-}
+
+
 
 /* Button styles for filtering */
 button {
