@@ -2,6 +2,12 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f5f5f5;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
   }
   
   header {
@@ -10,9 +16,11 @@ body {
     text-align: center;
     padding: 1rem;
     position: relative;
+    display: flex;
   }
   h1 {
     color : blue
+    
   }
   h2 
   {
@@ -70,6 +78,26 @@ body {
     width: 100%;
     border-radius: 8px;
   }
+
+  .coursework,
+    .toloria {
+      background-color: white;
+      border-radius: 0.375rem;
+      box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+      flex-grow: 1;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .coursework {
+      flex: 1 1 60%;
+    }
+
+    .toloria {
+      flex: 1 1 30%;
+      max-width: 180px;
+    }
   
   .certificate {
     background: white;
@@ -111,6 +139,8 @@ body {
     border: 2px solid #fff;
   }
   
+   .cse { background-color: #8b3e2f; }
+   .wdd { background-color: #6b392e; }
   
   footer {
     background: #214d6d;
