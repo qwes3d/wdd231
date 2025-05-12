@@ -1,123 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Standard Meta Tags -->
-  <title>Timbuktu chamber of commerce</title>
-  <meta name="description" content="Explore the official business directory of [Your Chamber Name] featuring trusted local businesses and service providers.">
-  <meta name="author" content="Your Chamber Name Web Team">
+  <title>Timbuktu Chamber of Commerce</title>
+  <meta name="description" content="Explore trusted local businesses in Timbuktu's official Chamber of Commerce directory.">
+  <meta name="author" content="Timbuktu Chamber Web Team">
 
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="stylestylesheet" href="styles/small_screen.css">
-  <link rel="stylesheet" href="styles/large_screen.css" media="screen and (min-width: 900px)">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-  <link rel="script" href="scripts/scripts.js"></script>"
 
-  <!-- Facebook Open Graph Meta Tags -->
-  <meta property="og:title" content="Business Directory | [Your Chamber Name]">
-  <meta property="og:description" content="Explore trusted local businesses in our official Chamber of Commerce directory.">
-  <meta property="og:image" content="https://yourdomain.com/images/social-preview.jpg">
-  <meta property="og:url" content="https://yourdomain.com/directory.html">
-  <meta property="og:type" content="website">
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="styles/style.css">
+
+  <script src="scripts/scripts.js" defer></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class= "logo">
-      <img src="images/ikenga.webp" alt=" Timbuktu chamber of commerce Logo" id="logo">
+  <header class="site-header">
+    <div class="logo-area">
+      <img src="images/ikenga.webp" alt="Timbuktu Chamber Logo" class="logo">
+      <div>
+        <h1>Timbuktu</h1>
+        <span>Chamber of Commerce</span>
+      </div>
     </div>
-    <h1>Timbuktu</h1>
-    <span>Chamber of commerce.</span>
-
-     <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-    ☰
-  </button>
-
-    <nav id="mobile-nav">
+    <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="main-nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="active">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">join</a></li>
+        <li><a href="join.html">Join</a></li>
         <li><a href="discover.html">Discover</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="events.html">Events</a></li>
-        <li><a href="podcast.html">podcast</a></li>
-
+        <li><a href="podcast.html">Podcast</a></li>
       </ul>
-
+    </nav>
   </header>
 
-    <main>
-    <section class="hero">
-    <img src="hero-placeholder.jpg" alt="Scalable Hero Image">
-    <button class="hero-button">Keynote Tickets</button>
-  </section>
-
   <main>
-    <h1>Home</h1>
-    <div class="info-panels">
-      <section class="events">
+    <section class="hero">
+      <img src="images/han.webp" alt="Scalable Hero" class="hero-image">
+      <button class="hero-button">Keynote Tickets</button>
+    </section>
+
+    <section class="info-section">
+      <div class="info-block events">
         <h2>Events</h2>
-        <p>[Upcoming Chamber Events]</p>
-        <p><a href="events.html">View All Events</a></p>
-        
-        <p>Join us for our upcoming events and networking opportunities!</p>
-      </section>
-      <section class="weather">
+        <p>Join us for upcoming networking events and business meetups!</p>
+        <a href="events.html">View All Events</a>
+      </div>
+      <div class="info-block weather">
         <h2>Current Weather</h2>
-        <p>75°F<br>Partly Cloudy<br>High: 85°F<br>Low: 52°F<br>Humidity: 34%<br>Sunrise: 7:30am<br>Sunset: 9:59pm</p>
-      </section>
-      <section class="forecast">
-        <h2>Weather Forecast</h2>
+        <p>75°F | Partly Cloudy<br>High: 85°F | Low: 52°F<br>Humidity: 34%<br>Sunrise: 7:30am<br>Sunset: 9:59pm</p>
+      </div>
+      <div class="info-block forecast">
+        <h2>Forecast</h2>
         <ul>
           <li>Today: <strong>90°F</strong></li>
-          <li>Wednesday: <strong>89°F</strong></li>
-          <li>Thursday: <strong>68°F</strong></li>
+          <li>Wed: <strong>89°F</strong></li>
+          <li>Thurs: <strong>68°F</strong></li>
         </ul>
-      </section>
-    </div>
+      </div>
+    </section>
 
-    <div class="business-cards">
+    <section class="business-directory">
       <div class="card">
-        <div class="image-placeholder"></div>
-        <h3>Business Name</h3>
-        <p>Business Tag Line</p>
-        <p><strong>EMAIL:</strong> info@gmail.com</p>
-        <p><strong>PHONE:</strong> 800-555-1234</p>
+        <img src="images/dan.jpg" alt="C.E.O">
+        <h3>Timbuktu</h3>
+        <p>Chamber of Commerce</p>
+        <p><strong>Email:</strong> info@gmail.com</p>
+        <p><strong>Phone:</strong> 800-555-1234</p>
         <p><strong>URL:</strong> mybusiness.com</p>
       </div>
       <div class="card">
-        <div class="image-placeholder"></div>
-        <h3>Business Name</h3>
-        <p>Business Tag Line</p>
-        <p><strong>EMAIL:</strong> info@gmail.com</p>
-        <p><strong>PHONE:</strong> 800-555-1234</p>
+        <img src="images/tad.jpg" alt="Chairman">
+        <h3>Timbuktu</h3>
+        <p>Chamber of Commerce</p>
+        <p><strong>Email:</strong> info@gmail.com</p>
+        <p><strong>Phone:</strong> 800-555-1234</p>
         <p><strong>URL:</strong> mybusiness.com</p>
       </div>
       <div class="card">
-        <div class="image-placeholder"></div>
-        <h3>Business Name</h3>
-        <p>Business Tag Line</p>
-        <p><strong>EMAIL:</strong> info@gmail.com</p>
-        <p><strong>PHONE:</strong> 800-555-1234</p>
+        <img src="images/nna.jpg" alt="Provost">
+        <h3>Timbuktu</h3>
+        <p>Chamber of Commerce</p>
+        <p><strong>Email:</strong> info@gmail.com</p>
+        <p><strong>Phone:</strong> 800-555-1234</p>
         <p><strong>URL:</strong> mybusiness.com</p>
       </div>
-    </div>
+    </section>
   </main>
 
-  <footer>
-     <div class="footer-location">
-      <div class="address">
+  <footer class="site-footer">
+    <div class="footer-info">
+      <div>
         <p><strong>Timbuktu Chamber of Commerce</strong><br>
           10 Rue De La Paix<br>
           Timbuktu, Mail 999<br>
           <a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a>
         </p>
       </div>
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.5393804164943!2d-3.0025618847729186!3d16.77516498843121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xeab5017f6bfb6c5%3A0xf3f6ba7aa93cd293!2sTimbuktu!5e0!3m2!1sen!2sgh!4v1600000000000"
-          width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <div class="footer-map">
+        <iframe src="https://www.google.com/maps/embed?..." width="100%" height="150" style="border:0;" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
     <div class="social-icons">
@@ -127,12 +119,12 @@
       <img src="images/linkedin.webp" alt="LinkedIn">
     </div>
     <div class="footer-note">
-      <p>WDD231 Class Project<br>Marie Martinez<br>
-      &copy; 20xx Timbuktu Chamber of Commerce<br>
-      Last Modification: <span id="last-modified"></span></p>
+      <p>WDD231 Class Project | Marie Martinez<br>
+        &copy; 20xx Timbuktu Chamber of Commerce<br>
+        Last Modified: <span id="last-modified"></span></p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  
 </body>
 </html>
