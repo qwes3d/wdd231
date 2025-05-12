@@ -1,0 +1,36 @@
+/* styles-mobile.css - overrides for small screens */
+
+.hamburger {
+  display: block;
+  font-size: 2rem;
+  background: none;
+  border: none;
+}
+
+nav ul {
+  display: none;
+  flex-direction: column;
+  background: #ddd;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 60px;
+  padding: 1rem;
+}
+
+nav.active ul {
+  display: flex;
+}
+
+.info-panels {
+  grid-template-columns: 1fr;
+}
+
+.business-cards {
+  flex-direction: column;
+}
+
+.footer-location {
+  flex-direction: column;
+  gap: 1rem;
+}

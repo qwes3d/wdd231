@@ -3,12 +3,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Standard Meta Tags -->
-  <title>Business Directory | [Your Chamber Name]</title>
+  <title>Timbuktu chamber of commerce</title>
   <meta name="description" content="Explore the official business directory of [Your Chamber Name] featuring trusted local businesses and service providers.">
   <meta name="author" content="Your Chamber Name Web Team">
 
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylestylesheet" href="styles/small_screen.css">
+  <link rel="stylesheet" href="styles/large_screen.css" media="screen and (min-width: 900px)">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="script" href="scripts/scripts.js"></script>"
 
   <!-- Facebook Open Graph Meta Tags -->
   <meta property="og:title" content="Business Directory | [Your Chamber Name]">
@@ -20,17 +24,25 @@
 <body>
   <header>
     <div class= "logo">
-      <img src="images/logo.png" alt="[Your Chamber Name] Logo" id="logo">
+      <img src="images/ikenga.webp" alt=" Timbuktu chamber of commerce Logo" id="logo">
     </div>
     <h1>Timbuktu</h1>
     <span>Chamber of commerce.</span>
-    <button id="menu-toggle">Menu</button>
+
+     <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+    ☰
+  </button>
+
     <nav id="mobile-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">join</a></li>
         <li><a href="discover.html">Discover</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="podcast.html">podcast</a></li>
+
       </ul>
 
   </header>
@@ -47,6 +59,9 @@
       <section class="events">
         <h2>Events</h2>
         <p>[Upcoming Chamber Events]</p>
+        <p><a href="events.html">View All Events</a></p>
+        
+        <p>Join us for our upcoming events and networking opportunities!</p>
       </section>
       <section class="weather">
         <h2>Current Weather</h2>
@@ -91,17 +106,25 @@
   </main>
 
   <footer>
-    <div class="contact-info">
-      <p><strong>Timbuktu Chamber of Commerce</strong><br>
-      10 Rue De La Paix<br>
-      Timbuktu, Mail 999<br>
-      info@timbuktucc.org</p>
+     <div class="footer-location">
+      <div class="address">
+        <p><strong>Timbuktu Chamber of Commerce</strong><br>
+          10 Rue De La Paix<br>
+          Timbuktu, Mail 999<br>
+          <a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a>
+        </p>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.5393804164943!2d-3.0025618847729186!3d16.77516498843121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xeab5017f6bfb6c5%3A0xf3f6ba7aa93cd293!2sTimbuktu!5e0!3m2!1sen!2sgh!4v1600000000000"
+          width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
     </div>
     <div class="social-icons">
-      <img src="yt-icon.png" alt="YouTube">
-      <img src="tw-icon.png" alt="Twitter">
-      <img src="fb-icon.png" alt="Facebook">
-      <img src="in-icon.png" alt="LinkedIn">
+      <img src="images/youtube.webp" alt="YouTube">
+      <img src="images/twitter.webp" alt="Twitter">
+      <img src="images/facebook.webp" alt="Facebook">
+      <img src="images/linkedin.webp" alt="LinkedIn">
     </div>
     <div class="footer-note">
       <p>WDD231 Class Project<br>Marie Martinez<br>
