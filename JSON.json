@@ -1,0 +1,27 @@
+{
+  "Family_name": "Eze",
+
+  "date_moved": "5_07_2011",
+
+  "number_of_record": 3,
+
+  "visited_by_bishopric": true,
+
+  "family_members": [
+    {
+     "name": "Eze Ekene",
+     "gender": "male",
+     "birthdate": "7_5_1990"
+    },
+    {
+     "name": "Eze Ekoro",
+     "gender": "male",
+     "birthdate": "7_5_1992"
+    },
+    {
+     "name": "Eze sandra",
+     "gender": "female",
+     "birthdate": "7_5_1995"
+    }
+  ]
+}

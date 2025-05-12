@@ -1,0 +1,56 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header, footer {
+  text-align: center;
+  background-color: #005a9c;
+  color: white;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Card Styling */
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: #005a9c;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin: 0.25rem 0;
+}
