@@ -50,7 +50,7 @@ function displayMembers(members) {
     card.classList.add("member-card");
 
     card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo">
+      <img src="images/${member.image}" alt="${member.name} logo" width="150" height="150">
       <h3>${member.name}</h3>
       <p>${member.description}</p>
       <p><strong>Address:</strong> ${member.address}</p>
