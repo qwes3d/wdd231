@@ -14,10 +14,15 @@
   <!-- Normalize CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
 
+  <link rel="stylesheet" href="styles/small.css">
+
   <!-- Main Stylesheets -->
   <link rel="stylesheet" href="styles/style.css">
 
   <script src="scripts/scripts.js" defer></script>
+
+  <script src="data/members.js" defer></script>
+
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -50,6 +55,14 @@
       <img src="images/han.webp" alt="Scalable Hero" class="hero-image">
       <button class="hero-button">Keynote Tickets</button>
     </section>
+
+    <section class="view-toggle">
+  <button id="gridView">Grid View</button>
+  <button id="listView">List View</button>
+</section>
+
+<section id="members" class="grid-view"></section>
+
 
     <section class="info-section">
       <div class="info-block events">
@@ -107,19 +120,17 @@
           Timbuktu, Mail 999<br>
           <a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a>
         </p>
-      </div>
-      <div class="footer-map">
-        <iframe src="https://www.google.com/maps/embed?..." width="100%" height="150" style="border:0;" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
+      
     <div class="social-icons">
       <img src="images/youtube.webp" alt="YouTube">
       <img src="images/twitter.webp" alt="Twitter">
       <img src="images/facebook.webp" alt="Facebook">
-      <img src="images/linkedin.webp" alt="LinkedIn">
+      <img src="images/linkedin.webp" alt="LinkedIn"></div>
+     
+    </div>
     </div>
     <div class="footer-note">
-      <p>WDD231 Class Project | Marie Martinez<br>
+      <p>WDD231 Class Project | Anyalechi Chidiebere<br>
         &copy; 20xx Timbuktu Chamber of Commerce<br>
         Last Modified: <span id="last-modified"></span></p>
     </div>

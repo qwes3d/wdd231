@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Tendam",
+    "address": "madrid spain, Timbuktu",
+    "phone": "+34 915 32 27 15",
+    "website": "https://www.tendam.es/en/",
+    "image": "tendam.webp",
+    "membership": 3,
+    "description": "global fashion retail."
+  },
+  {
+    "name": "swisscom",
+    "address": "45 Palm Street, Timbuktu",
+    "phone": "800-987-6543",
+    "website": "https://swisscom.ch",
+    "image": "swiss.webp",
+    "membership": 2,
+    "description": "blazing fast internet network provider."
+  },
+  {
+    "name": "Desert Tech Solutions",
+    "address": "88 Tech Road, Timbuktu",
+    "phone": "0800-800-800",
+    "website": "https://deserttech.com",
+    "image": "desert.webp",
+    "membership": 1,
+    "description": "IT services and digital solutions for local businesses."
+  },
+  {
+    "name": "CIO TIMES",
+    "address": "Montebello USA, Timbuktu",
+    "phone": "+1 (614) 467-0922",
+    "website": "https://theciotimes.com/",
+    "image": "cio.webp",
+    "membership": 2,
+    "description": "empowering. enterprenuer. excellence."
+  },
+  {
+    "name": "Mr. Biggs",
+    "address": "109 Fabric Ave, Timbuktu",
+    "phone": "800-654-3210",
+    "website": "https://mrbiggs.com",
+    "image": "mrbiggs.webp",
+    "membership": 3,
+    "description": "fast food restaurant serving local delicacies."
+  },
+  {
+    "name": "massimodutti",
+    "address": "barcelona, spain, Timbuktu",
+    "phone": "800-777-8888",
+    "website": "https://www.massimodutti.com/",
+    "image": "massimo.webp",
+    "membership": 1,
+    "description": "fashion and looks."
+  },
+  {
+    "name": "Nomad Health Center",
+    "address": "55 Wellness St, Timbuktu",
+    "phone": "800-555-0000",
+    "website": "https://nomadhealth.com",
+    "image": "nomad.webp",
+    "membership": 2,
+    "description": "Healthcare and wellness services for all residents."
+  }
+]

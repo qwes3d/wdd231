@@ -1,12 +1,72 @@
+// Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const nav = document.querySelector('nav');})
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.main-nav');
 
-  // Move hamburger to far right using inline style
-  hamburger.style.marginLeft = 'auto';
-  hamburger.style.display = 'block';
-
+  // Toggle navigation menu visibility
   hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');})
-// Display last modified date
-document.getElementById("last-modified").textContent = document.lastModified;
+    nav.classList.toggle('active');
+  });
+
+  // Optional: Close menu when a link is clicked (on mobile)
+  const navLinks = document.querySelectorAll('.main-nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
+  });
+
+  // Display last modified date in footer
+  const lastModified = document.getElementById('last-modified');
+  if (lastModified) {
+    lastModified.textContent = document.lastModified;
+  }
+});
+
+const membersContainer = document.getElementById("members");
+const gridBtn = document.getElementById("gridView");
+const listBtn = document.getElementById("listView");
+
+async function getMembers() {
+  const response = await fetch('data/members.json');
+  const data = await response.json();
+  displayMembers(data);
+}
+
+function displayMembers(members) {
+  membersContainer.innerHTML = "";
+
+  members.forEach(member => {
+    const card = document.createElement("div");
+    card.classList.add("member-card");
+
+    card.innerHTML = `
+      <img src="images/${member.image}" alt="${member.name} logo">
+      <h3>${member.name}</h3>
+      <p>${member.description}</p>
+      <p><strong>Address:</strong> ${member.address}</p>
+      <p><strong>Phone:</strong> ${member.phone}</p>
+      <p><a href="${member.website}" target="_blank">Visit Website</a></p>
+      <p><strong>Membership:</strong> ${membershipLevel(member.membership)}</p>
+    `;
+
+    membersContainer.appendChild(card);
+  });
+}
+
+function membershipLevel(level) {
+  return level === 3 ? "Gold" : level === 2 ? "Silver" : "Member";
+}
+
+gridBtn.addEventListener("click", () => {
+  membersContainer.classList.add("grid-view");
+  membersContainer.classList.remove("list-view");
+});
+
+listBtn.addEventListener("click", () => {
+  membersContainer.classList.add("list-view");
+  membersContainer.classList.remove("grid-view");
+});
+
+getMembers();
+
