@@ -21,7 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (lastModified) {
     lastModified.textContent = document.lastModified;
   }
+
+ 
+  const keynoteBtn = document.getElementById('keynoteBtn');
+  const keynoteText = document.getElementById('keynoteText');
+
+  keynoteBtn.addEventListener('click', () => {
+    keynoteText.classList.toggle('show');
+  });
 });
+// Fetch and display members data
 
 const membersContainer = document.getElementById("members");
 const gridBtn = document.getElementById("gridView");
@@ -46,9 +55,9 @@ function displayMembers(members) {
       <p>${member.description}</p>
       <p><strong>Address:</strong> ${member.address}</p>
       <p><strong>Phone:</strong> ${member.phone}</p>
-      <p><a href="${member.website}" target="_blank">Visit Website</a></p>
-      <p><strong>Membership:</strong> ${membershipLevel(member.membership)}</p>
-    `;
+  <p><a href="${member.website}" target="_blank">Visit Website</a></p>
+  <p><strong>Membership:</strong> ${membershipLevel(member.membership)}</p>
+`;
 
     membersContainer.appendChild(card);
   });

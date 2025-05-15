@@ -195,7 +195,7 @@ header {
 .member-card {
   border: 1px solid #ccc;
   padding: 1rem;
-  background: #fff;
+  background: #ffffff;
   border-radius: 8px;
   text-align: center;
 }
@@ -204,3 +204,26 @@ header {
   max-width: 100px;
   height: auto;
 }
+
+.keynote-popup {
+  background-color: #fff;
+  border: 0;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  color: #004d40;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.keynote-popup.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
