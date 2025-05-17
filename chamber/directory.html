@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Timbuktu Chamber of Commerce</title>
-  <meta name="description" content="Explore trusted local businesses in Timbuktu's official Chamber of Commerce directory.">
+  <meta name="description"
+    content="Explore trusted local businesses in Timbuktu's official Chamber of Commerce directory.">
   <meta name="author" content="Timbuktu Chamber Web Team">
 
   <!-- Favicon -->
@@ -15,18 +17,32 @@
   <link rel="stylesheet" href="styles/normalize.css">
 
   <link rel="stylesheet" href="styles/small.css">
-
-  <!-- Main Stylesheets -->
+  
+    <!-- Main Stylesheets -->
   <link rel="stylesheet" href="styles/style.css">
+
+
 
   <script src="scripts/scripts.js" defer></script>
 
-  <script src="data/members.json" defer></script>
+  <!-- console.log("Page Loaded");
 
+  // Log navigation menu items
+  console.log(document.querySelectorAll(".main-nav ul li"));
+
+  // Log business directory cards
+  console.log(document.querySelectorAll(".business-directory .card"));
+
+  // Log footer information
+  console.log(document.querySelector(".footer-info"));
+
+  // Log last modified date
+  console.log(document.getElementById("last-modified")); -->
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header class="site-header">
     <div class="logo-area">
@@ -52,21 +68,25 @@
 
   <main>
     <section class="hero">
-      <img src="images/han.webp" alt="Scalable Hero" class="hero-image">
-       <button class="hero-button" id="keynoteBtn">Keynote Tickets</button>
-  
-  <!-- Hidden text that shows when button is clicked -->
-  <div id="keynoteText" class="keynote-popup hidden">
-    <p>Join us for an unforgettable keynote featuring world-class speakers, innovation showcases, and networking opportunities!</p>
-  </div>
-</section>
+      <img src="images/han.webp"  alt="Scalable Hero" class="hero-image">
+      <button class="hero-button" id="keynoteBtn">Keynote Tickets</button>
+
+      <!-- Hidden text that shows when button is clicked -->
+      <div id="keynoteText" class="keynote-popup hidden">
+        <p>Join us for an unforgettable keynote featuring world-class speakers, innovation showcases, and networking
+          opportunities!</p>
+      </div>
+    </section>
 
     <section class="view-toggle">
-  <button id="gridView">Grid View</button>
-  <button id="listView">List View</button>
-</section>
+      <button id="gridView">Grid View</button>
+      <button id="listView">List View</button>
+    </section>
 
-<section id="members" class="grid-view"></section>
+    <section id="members" class="grid-view">
+
+
+    </section>
 
 
     <section class="info-section">
@@ -91,7 +111,7 @@
 
     <section class="business-directory">
       <div class="card">
-        <img src="images/dan.jpg" alt="C.E.O" width="300" height="300">
+        <img src="images/dan.webp" loading="lazy" alt="C.E.O" width="300" height="300">
         <h3>Timbuktu</h3>
         <p>Chamber of Commerce</p>
         <p><strong>Email:</strong> info@gmail.com</p>
@@ -99,7 +119,7 @@
         <p><strong>URL:</strong> mybusiness.com</p>
       </div>
       <div class="card">
-        <img src="images/tad.jpg" alt="Chairman">
+        <img src="images/tad.webp" loading="lazy" alt="Chairman">
         <h3>Timbuktu</h3>
         <p>Chamber of Commerce</p>
         <p><strong>Email:</strong> info@gmail.com</p>
@@ -107,7 +127,7 @@
         <p><strong>URL:</strong> mybusiness.com</p>
       </div>
       <div class="card">
-        <img src="images/nna.jpg" alt="Provost">
+        <img src="images/nna.webp" loading="lazy" alt="Provost">
         <h3>Timbuktu</h3>
         <p>Chamber of Commerce</p>
         <p><strong>Email:</strong> info@gmail.com</p>
@@ -117,23 +137,25 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-info">
+  <footer class="site-footer"> 
+    
+    
       <div>
         <p><strong>Timbuktu Chamber of Commerce</strong><br>
           10 Rue De La Paix<br>
           Timbuktu, Mail 999<br>
           <a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a>
         </p>
-      
-    <div class="social-icons">
-      <img src="images/youtube.webp" alt="YouTube">
-      <img src="images/twitter.webp" alt="Twitter">
-      <img src="images/facebook.webp" alt="Facebook">
-      <img src="images/linkedin.webp" alt="LinkedIn"></div>
-     
-    </div>
-    </div>
+      </div>
+
+      <div class="social-icons">
+        <img src="images/youtube.webp" loading="lazy" alt="YouTube">
+        <img src="images/twitter.webp" loading="lazy" alt="Twitter">
+        <img src="images/facebook.webp" loading="lazy" alt="Facebook">
+        <img src="images/linkedin.webp" loading="lazy" alt="LinkedIn">
+      </div>
+
+   
     <div class="footer-note">
       <p>WDD231 Class Project | Anyalechi Chidiebere<br>
         &copy; 20xx Timbuktu Chamber of Commerce<br>
@@ -141,6 +163,7 @@
     </div>
   </footer>
 
-  
+
 </body>
+
 </html>

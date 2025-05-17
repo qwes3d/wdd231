@@ -55,15 +55,19 @@
     border-radius: 4px;
   }
 
-  .info-section {
-    flex-direction: row;
-    justify-content: space-between;
+.hero-image {
+  width: 100%;
+  height: auto;
+}
 
+  .info-section {
+    display: grid;
+    /* grid-template-rows: 1fr 1fr 1fr; */
   }
 
   .business-directory {
-    display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   padding: 2rem;
   }
@@ -74,15 +78,31 @@
   }
 
   /* Footer grid layout for large screens */
- .site-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+ footer {
+  display: flex;
+  justify-content: space-evenly;
   gap: 1rem;
   padding: 2rem;
   background-color: #263238;
   color: white;
   align-items: center;
   text-align: left;
+ }
+
+ footer a {
+  color: white;
+  text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-logo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
  }
 
 .footer-info {
@@ -114,9 +134,9 @@
 color: #ccc;
 }
 
-#members.grid-view {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+#members {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
 }
-}
+
