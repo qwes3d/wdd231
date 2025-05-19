@@ -121,7 +121,7 @@ header {
   border-radius: 5px;
 }
 
-.weather,
+.weather-info,
 .forecast {
   background-color: #f1f8e9;
 }
@@ -179,6 +179,8 @@ footer {
 .footer-note {
   font-size: 0.9rem;
   color: #ccc;
+  justify-items: center;
+  
 }
 
 /* Mobile-first default (1-column) */
@@ -249,6 +251,14 @@ section.spotlights {
 section h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  background: #004d40;
+  color: white;
+}
+
+section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #004d40;
 }
 
 /* Forecast list styling */
@@ -265,17 +275,28 @@ section h2 {
   gap: 1rem;
 }
 
+.spotlight-card.gold {
+  border-left: 6px solid gold;
+  background-color: #fffbe6;
+}
+
+.spotlight-card.silver {
+  border-left: 6px solid silver;
+  background-color: #f0f0f5;
+}
+
 .spotlight-card {
-  background-color: white;
   padding: 1rem;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 0.5renm;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .spotlight-card img {
   max-width: 100px;
   margin: 0.5rem auto;
   display: block;
+  height: auto;
 }
 
