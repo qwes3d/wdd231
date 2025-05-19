@@ -134,7 +134,7 @@ async function getSpotlights() {
 
 // Fetch and display weather
 async function getWeather() {
-  const apiKey = 'YOUR_API_KEY'; // <-- Replace this with your actual OpenWeatherMap API key
+  const apiKey = "9a425d9df9f49312fd298b947ab9c00a"; // <-- Replace this with your actual OpenWeatherMap API key
   const lat = 13.4833;
   const lon = -88.1833;
   const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
