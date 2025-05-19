@@ -152,20 +152,30 @@ async function getWeather() {
     // Forecast (next 3 days)
     const forecastList = document.getElementById('forecast-list');
     forecastList.innerHTML = '';
+const forecastsByDate = {};
 
-    const dailyForecasts = {};
-    data.list.forEach(forecast => {
-      const date = forecast.dt_txt.split(' ')[0];
-      if (!dailyForecasts[date] && Object.keys(dailyForecasts).length < 3) {
-        dailyForecasts[date] = forecast;
-      }
-    });
+data.list.forEach(forecast => {
+  const dateTime = forecast.dt_txt;
+  const [date, time] = dateTime.split(" ");
+  if (time === "12:00:00") {
+    forecastsByDate[date] = forecast;
+  }
+});
 
-    Object.entries(dailyForecasts).forEach(([date, forecast]) => {
-      const li = document.createElement('li');
-      li.textContent = `${date}: ${forecast.main.temp.toFixed(1)}°C`;
-      forecastList.appendChild(li);
-    });
+// Grab the next 3 days
+const dates = Object.keys(forecastsByDate).slice(0, 3);
+dates.forEach(date => {
+  const forecast = forecastsByDate[date];
+  const li = document.createElement('li');
+  const readableDate = new Date(date).toLocaleDateString(undefined, {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric'
+  });
+  li.textContent = `${readableDate}: ${forecast.main.temp.toFixed(1)}°C`;
+  forecastList.appendChild(li);
+});
+
 
   } catch (error) {
     console.error("Failed to fetch weather:", error);

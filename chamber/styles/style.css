@@ -150,19 +150,34 @@ color: #ccc;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
+  .join-btn {
+  background-color: #005f73;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.join-btn:hover {
+  background-color: #0a9396;
+  transform: scale(1.05);
+}
+
+
 
   /* Place weather in bottom right of hero image */
   .hero {
     position: relative;
   }
 
-  .weather {
+  section.weather {
     position: absolute;
-    bottom: 8rem;
+    bottom: 6rem;
     right: 1rem;
     width: 140px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, 0.027);
+    height: 300px;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);

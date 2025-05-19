@@ -56,11 +56,19 @@
     <section class="hero">
       <img src="images/han.webp"  alt="Scalable Hero" class="hero-image">
      <div class="hero-cta">
-        <a href="join.html" class="btn btn-primary" aria-label="Join the Chamber of Commerce">Join the Chamber</a>
+        <a href="join.html" class="join-btn" aria-label="Join the Chamber of Commerce">Join the Chamber</a>
       </div>
 
-        <p>Join us for an unforgettable keynote featuring world-class speakers, innovation showcases, and networking
-          opportunities!</p>
+       <section class="benefits">
+  <h3>Why Join the Chamber?</h3>
+  <ul>
+    <li>Gain exposure through our online directory and events</li>
+    <li>Get advocacy support on local business regulations</li>
+    <li>Access networking opportunities and workshops</li>
+    <li>Promotional spotlight for gold and silver members</li>
+  </ul>
+</section>
+
       </div>
     </section>
 
@@ -79,25 +87,15 @@
     </section>
 
     <!-- Weather Section -->
-    <section class="weather">
-  <h2>Weather</h2>
-  
-  <!-- Current Weather -->
-  <div class="current-weather">
-    <p><strong>Temperature:</strong> <span id="current-temp">--</span>°C</p>
-    <p><strong>Condition:</strong> <span id="current-desc">--</span></p>
-  </div>
-
-  <!-- 3-Day Forecast -->
-  <div class="forecast">
-    <h3>3-Day Forecast</h3>
-    <ul>
-      <li><strong>Day 1:</strong> <span class="forecast-temp">--</span>°C</li>
-      <li><strong>Day 2:</strong> <span class="forecast-temp">--</span>°C</li>
-      <li><strong>Day 3:</strong> <span class="forecast-temp">--</span>°C</li>
-    </ul>
-  </div>
+   <section class="weather">
+    <h2> Weather</h2>
+  <p><strong>Current Temp:</strong> <span id="current-temp"></span>°C</p>
+  <p><strong>condition:</strong> <span id="current-desc"></span></p>
+    <h2>Forecast</h2>
+  <ul id="forecast-list"></ul>
+  <p id="weather-error"></p>
 </section>
+
 
     <!-- Company Spotlights Section -->
     <section class="spotlights">
