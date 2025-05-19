@@ -233,3 +233,49 @@ footer {
 .hidden {
   display: none;
 }
+
+section.current-event,
+section.weather,
+section.spotlights {
+  padding: 1rem;
+  margin: 1rem auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 95%;
+}
+
+/* Headings */
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Forecast list styling */
+.weather ul,
+.spotlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Spotlight cards (mobile stack) */
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.spotlight-card {
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.spotlight-card img {
+  max-width: 100px;
+  margin: 0.5rem auto;
+  display: block;
+}
+

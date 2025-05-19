@@ -140,3 +140,37 @@ color: #ccc;
   gap: 1rem;
 }
 
+  section.current-event,
+  section.weather,
+  section.spotlights {
+    max-width: 900px;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+
+  /* Place weather in bottom right of hero image */
+  .hero {
+    position: relative;
+  }
+
+  .weather {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .weather h2::after {
+    content: " ⛅"; /* Large screen weather icon as pseudo-element */
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+
+

@@ -80,3 +80,71 @@ listBtn.addEventListener("click", () => {
 
 getMembers();
 
+async function loadSpotlights() {
+  const response = await fetch('data/members.json');
+  const data = await response.json();
+  const members = data.members;
+
+  const goldSilver = members.filter(member =>
+    member.membership === 'gold' || member.membership === 'silver'
+  );
+
+  const shuffled = goldSilver.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+  const container = document.getElementById('spotlight-container');
+  container.innerHTML = '';
+
+  shuffled.forEach(member => {
+    const card = document.createElement('div');
+    card.classList.add('spotlight-card');
+    card.innerHTML = `
+      <h3>${member.name}</h3>
+      <img src="${member.logo}" alt="${member.name} logo" loading="lazy">
+      <p><strong>Phone:</strong> ${member.phone}</p>
+      <p><strong>Address:</strong> ${member.address}</p>
+      <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+      <p><strong>Membership:</strong> ${member.membership}</p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+loadSpotlights();
+
+const apiKey = 'YOUR_API_KEY'; // Replace with your actual OpenWeatherMap API key
+const lat = 13.4833;  // San Miguel, El Salvador latitude
+const lon = -88.1833; // San Miguel, El Salvador longitude
+
+async function getWeather() {
+  const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  const response = await fetch(url);
+  const data = await response.json();
+
+  // Current Weather
+  const current = data.list[0];
+  document.getElementById('current-temp').textContent = current.main.temp.toFixed(1);
+  document.getElementById('current-desc').textContent = current.weather[0].description;
+
+  // Forecast: next 3 days (filter one time per day)
+  const forecastList = document.getElementById('forecast-list');
+  forecastList.innerHTML = ''; // Clear old forecast
+
+  const dailyForecasts = {};
+  data.list.forEach(forecast => {
+    const date = forecast.dt_txt.split(' ')[0];
+    if (!dailyForecasts[date] && Object.keys(dailyForecasts).length < 3) {
+      dailyForecasts[date] = forecast;
+    }
+  });
+
+  Object.entries(dailyForecasts).forEach(([date, forecast]) => {
+    const li = document.createElement('li');
+    li.textContent = `${date}: ${forecast.main.temp.toFixed(1)}°C`;
+    forecastList.appendChild(li);
+  });
+}
+
+getWeather();
+
+
+
