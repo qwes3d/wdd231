@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Directory - Global Online Marketplace</title>
+  <meta name="description" content="Explore the companies featured in our marketplace." />
+  <meta name="author" content="Your Name" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Global Online Marketplace</h1>
+    <nav>
+      <button id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      <ul id="navMenu" class="nav-menu">
+        <li><a href="final.html">Home</a></li>
+        <li><a href="directory.html" aria-current="page">Company Directory</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Our Companies</h2>
+      <div id="companyGrid" class="grid-container" aria-live="polite">
+        <!-- JS inserts company listings here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Global Online Marketplace. All rights reserved.</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script type="module" src="scripts/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Global Online Marketplace</title>
+  <meta name="description" content="Contact Global Online Marketplace to join or learn more." />
+  <meta name="author" content="Your Name" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Global Online Marketplace</h1>
+    <nav>
+      <button id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      <ul id="navMenu" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Company Directory</a></li>
+        <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact Us</h2>
+      <form id="contactForm" action="#" method="post" novalidate>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="formResult" role="alert" aria-live="assertive"></div>
+    </section>
+
+    <section>
+      <h2>How to Join</h2>
+      <p>If you want your company listed on our marketplace, please contact us with your details and we will guide you through the process.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Global Online Marketplace. All rights reserved.</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script type="module" src="scripts/main.js" defer></script>
+</body>
+</html>

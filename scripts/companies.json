@@ -1,0 +1,22 @@
+{
+  "companies": [
+    {
+      "name": "Ghana Builders Ltd",
+      "description": "Leading construction material supplier in Ghana.",
+      "contact": "Mr. Kwame Nkrumah",
+      "phone": "+233 24 123 4567",
+      "email": "contact@ghanabuilders.com",
+      "website": "https://ghanabuilders.com",
+      "logo": "images/ghanabuilders_logo.png"
+    },
+    {
+      "name": "Accra Equipment Rentals",
+      "description": "Reliable heavy equipment rentals in Accra.",
+      "contact": "Mrs. Akosua Mensah",
+      "phone": "+233 20 765 4321",
+      "email": "info@accraequipment.com",
+      "website": "https://accraequipment.com",
+      "logo": "images/accraequipment_logo.png"
+    }
+  ]
+}
