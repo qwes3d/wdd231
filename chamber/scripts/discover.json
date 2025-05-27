@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Sankore Mosque",
+    "image": "images/sankore.webp",
+    "address": "Sankore, Timbuktu",
+    "description": "Ancient center of learning and Islamic scholarship."
+  },
+  {
+    "title": "Ahmed Baba Institute",
+    "image": "images/ahmedbaba.webp",
+    "address": "Library Rd, Timbuktu",
+    "description": "Modern facility preserving ancient manuscripts."
+  },
+  {
+    "title": "Timbuktu Market",
+    "image": "images/market.webp",
+    "address": "Central Square, Timbuktu",
+    "description": "Lively marketplace for local trade and crafts."
+  },
+  {
+    "title": "Djinguereber Mosque",
+    "image": "images/djinguereber.webp",
+    "address": "City Center, Timbuktu",
+    "description": "Historic mosque built in the 14th century."
+  },
+  {
+    "title": "Timbuktu Museum",
+    "image": "images/museum.webp",
+    "address": "Heritage Blvd, Timbuktu",
+    "description": "Museum showcasing Malian culture and history."
+  },
+  {
+    "title": "Sahara Dunes",
+    "image": "images/sahara.webp",
+    "address": "Edge of Town, Timbuktu",
+    "description": "Explore the majestic dunes of the Sahara Desert."
+  },
+  {
+    "title": "Timbuktu Cultural Center",
+    "image": "images/culture.webp",
+    "address": "Cultural St, Timbuktu",
+    "description": "Venue for art, dance, and traditional festivals."
+  },
+  {
+    "title": "River Niger Viewpoint",
+    "image": "images/niger.webp",
+    "address": "Niger Bank, Timbuktu",
+    "description": "Scenic spot overlooking the great Niger River."
+  }
+]

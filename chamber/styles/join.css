@@ -1,0 +1,42 @@
+
+    .membership-cards {
+      display: grid;
+      gap: 1rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      background: #fff;
+      transition: transform 0.3s ease;
+    }
+    .card a {
+      color: blue;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .modal-content {
+      background: #fff;
+      margin: 10% auto;
+      padding: 2rem;
+      max-width: 500px;
+      position: relative;
+    }
+    .close {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
