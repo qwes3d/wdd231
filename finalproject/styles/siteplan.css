@@ -1,0 +1,114 @@
+/* Normalize / Reset Basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: #ECF0F1;
+  color: #2C3E50;
+}
+
+/* Layout Container */
+body {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background-color: #2C3E50;
+  color: #ECF0F1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 1rem 0;
+}
+
+nav a {
+  background-color: #E67E22;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #cf711c;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 2rem;
+}
+
+h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2C3E50;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+ul li {
+  margin-bottom: 0.3rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #2C3E50;
+  color: #ECF0F1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Responsive (Tablet/Desktop) */
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav li {
+    margin: 0 0.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}

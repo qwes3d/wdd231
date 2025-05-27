@@ -1,0 +1,39 @@
+/* Responsive styles /
+@media (min-width: 600px) {
+/ Navigation horizontal */
+#navToggle {
+display: none;
+}
+.nav-menu {
+display: flex !important;
+position: static;
+flex-direction: row;
+gap: 1rem;
+background: transparent;
+width: auto;
+}
+.nav-menu li {
+border: none;
+}
+.nav-menu li a {
+padding: 0;
+color: white;
+}
+.nav-menu li a:hover,
+.nav-menu li a[aria-current="page"] {
+background: transparent;
+text-decoration: underline;
+}
+
+/* Grid layouts */
+#productGrid,
+#adGrid,
+#companyGrid {
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.product-card,
+.ad-card,
+.company-card {
+max-width: 300px;
+}
