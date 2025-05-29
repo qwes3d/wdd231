@@ -1,0 +1,23 @@
+.hamburger {
+  display: block;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.main-nav {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.main-nav.show {
+  display: flex;
+}

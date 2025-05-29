@@ -89,7 +89,7 @@ body {
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: var(--accent-color);
+  color: #e4e8e9;
 }
 
 .hamburger {

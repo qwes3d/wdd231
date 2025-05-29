@@ -1,42 +1,104 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .membership-cards {
-      display: grid;
-      gap: 1rem;
-      animation: fadeInUp 1s ease-in-out;
-    }
-    .card {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      background: #fff;
-      transition: transform 0.3s ease;
-    }
-    .card a {
-      color: blue;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-    }
-    .modal-content {
-      background: #fff;
-      margin: 10% auto;
-      padding: 2rem;
-      max-width: 500px;
-      position: relative;
-    }
-    .close {
-      position: absolute;
-      top: 1rem; right: 1rem;
-      cursor: pointer;
-      font-size: 1.5rem;
-    }
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  padding: 1rem;
+}
+
+/* Cards Grid */
+.membership-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: #fff;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card a {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 20% 1rem;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Large Screens */
+@media (min-width: 600px) {
+  .membership-cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .modal-content {
+    margin: 10% auto;
+  }
+}
+
+
+  .hamburger {
+    display: none; /* Hide hamburger icon on large screens */
+  }
+
+  .main-nav {
+    display: flex !important; /* Always show menu on large screens */
+    flex-direction: row;
+    position: static;
+    background: none;
+  }
+
+
+
+
+
