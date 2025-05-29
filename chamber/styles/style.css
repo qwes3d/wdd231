@@ -191,3 +191,11 @@ color: #ccc;
 
 
 
+  .membership-cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .modal-content {
+    margin: 10% auto;
+  }
+

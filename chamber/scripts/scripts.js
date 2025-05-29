@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.main-nav');
   hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
-  });
 
   // Close nav menu on mobile when link is clicked
   document.querySelectorAll('.main-nav a').forEach(link => {
@@ -12,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('active');
     });
   });
+
+  document.querySelector('.hamburger').addEventListener('click', () => {
+  document.querySelector('.menu').classList.toggle('show');
+});
+});
 
   // Display last modified date
   const lastModified = document.getElementById('last-modified');
@@ -185,4 +189,21 @@ dates.forEach(date => {
     }
   }
 }
+
+ // Timestamp setup
+    document.getElementById("timestamp").value = new Date().toISOString();
+
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      document.querySelectorAll(".modal").forEach(modal => {
+        if (event.target === modal) modal.style.display = "none";
+      });
+    };
 
