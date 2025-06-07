@@ -25,19 +25,14 @@
   padding: 1rem;
 }
 
-#page > .hamburger {
-  display: block;
-  font-size: 1.5rem;
+/* Hamburger Button */
+#hamburger {
+  font-size: 2rem;
   background: none;
   border: none;
+  color: rgb(20, 2, 2);
   cursor: pointer;
-  margin: 1rem auto;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-#page > .hamburger:hover {
-  color: #333;
+  display: block;
 }
 
 /* Navigation */
@@ -45,28 +40,12 @@
   grid-area: nav;
   background-color: #ffa08c;
   padding: 1rem;
-  position: absolute;
-  top: 4rem; /* Just below the hamburger */
-  right: 1rem;
-  left: auto;
-  z-index: 1000;
-  font-size: smaller;
 }
 
 #page > nav ul {
-  display: none;
-  flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: #333;
-  top: 100%; /* Drop below the header */
-  height: auto; /* Auto height for content */
-  right: 0; /* Align to the right */
-  width: 100px; /* Compact width */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
 }
 
 #page > nav a {
@@ -85,13 +64,6 @@
   color: white;
 }
 
-#page > nav a:hover {
-  background-color: #ffa08c;
-  color: white;
-}
-#page > nav.active ul {
-  display: flex;
-}
 /* Navigation Toggle */
 .nav-closed {
   display: none;
