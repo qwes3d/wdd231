@@ -1,75 +1,195 @@
-.discover-grid {
+/* Base Page Layout (Mobile-first) */
+#page {
   display: grid;
-  gap: 1rem;
-  padding: 1rem;
   grid-template-areas:
-    "item1"
-    "item2"
-    "item3"
-    "item4"
-    "item5"
-    "item6"
-    "item7"
-    "item8";
+    "head"
+    "nav"
+    "main"
+    "foot";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;
 }
 
+/* Header */
+#page > header {
+  grid-area: head;
+  background-color: #8ca0ff;
+  color: rgb(17, 2, 2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* Hamburger Button */
+#hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: rgb(20, 2, 2);
+  cursor: pointer;
+  display: block;
+}
+
+/* Navigation */
+#page > nav {
+  grid-area: nav;
+  background-color: #ffa08c;
+  padding: 1rem;
+}
+
+#page > nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#page > nav a {
+  display: block;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: white;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+#page > nav a.active {
+  background-color: #8ca0ff;
+  color: white;
+}
+
+/* Navigation Toggle */
+.nav-closed {
+  display: none;
+}
+
+/* Main Area */
+#page > main {
+  grid-area: main;
+  background-color: #ffff64;
+  padding: 1rem;
+}
+
+/* Footer */
+#page > footer {
+  grid-area: foot;
+  background-color: #080707;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Visitor Message */
 .visitor-msg {
   background-color: #f0f0f0;
   padding: 1rem;
-  margin: 1rem;
+  margin-bottom: 1rem;
   border-left: 5px solid #0077cc;
   font-style: italic;
 }
 
-.card {
-  background: #fff;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, opacity 0.8s ease;
-  opacity: 0;
-  transform: translateY(30px);
+/* Discover Grid */
+.discover-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
-.card.loaded {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card:hover figure img {
-  filter: brightness(1.1);
-  transform: scale(1.05);
-}
-
-.card h2 {
-  margin-top: 0;
-}
-
-.card figure {
-  margin: 0;
+/* Discover Card */
+.discover-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
 }
 
-.card figure img {
+.discover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.discover-card img {
   width: 100%;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  height: auto;
+  border-radius: 6px 6px 0 0;
+  object-fit: cover;
+  max-height: 200px;
 }
 
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.discover-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #8ca0ff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.discover-btn:hover {
+  background-color: #6b84ff;
+}
+
+/* ---------------- Responsive Layouts ------------------ */
+
+/* Tablet: 641px+ */
 @media (min-width: 641px) {
   .discover-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "item1 item2"
-      "item3 item4"
-      "item5 item6"
-      "item7 item8";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #menuBtn {
+    display: none;
+  }
+
+  #page > nav {
+    display: block !important;
   }
 }
 
+/* Desktop: 1025px+ */
 @media (min-width: 1025px) {
   .discover-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #page {
+    grid-template-columns: 250px 1fr;
     grid-template-areas:
-      "item1 item2 item3 item4"
-      "item5 item6 item7 item8";
+      "head head"
+      "nav main"
+      "foot foot";
+  }
+
+  #page > nav {
+    min-height: 100%;
   }
 }

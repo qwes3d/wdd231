@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Discover Timbuktu</title>
-  <meta name="description" content="Explore local attractions in Timbuktu." />
-  <link rel="stylesheet" href="styles/normalize.css" />
-  <link rel="stylesheet" href="styles/small.css" />
-  <link rel="stylesheet" href="styles/style.css" />
-  <script src="scripts/scripts.js" defer></script>
+  <meta name="description" content="Explore local attractions in Timbuktu." >
+  <link rel="stylesheet" href="styles/normalize.css" >
+  <link rel="stylesheet" href="styles/small.css" >
+  <link rel="stylesheet" href="styles/style.css" >
+  <link rel="stylesheet" href="styles/discover.css" >
+  <script src="scripts/discover.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo-area">
-      <img src="images/ikenga.webp" alt="Timbuktu Chamber Logo" class="logo" />
-      <div>
-        <h1>Timbuktu</h1>
-        <span>Chamber of Commerce</span>
+  <div id="page">
+    
+    <header class="site-header">
+      <div class="logo-area">
+        <img src="images/ikenga.webp" alt="Timbuktu Chamber Logo" class="logo" >
+        <div>
+          <h1>Timbuktu</h1>
+          <span>Chamber of Commerce</span>
+        </div>
       </div>
-    </div>
-    <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+      <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+    </header>
+
     <nav class="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -31,39 +36,35 @@
         <li><a href="podcast.html">Podcast</a></li>
       </ul>
     </nav>
-  </header>
 
-  <main>
-    <aside class="visitor-msg" id="visitorMessage">Loading message...</aside>
-    <section class="discover-grid" id="discoverGrid"></section>
-  </main>
+    <main>
+      <aside class="visitor-msg" id="visitorMessage">Loading message...</aside>
+      <section class="discover-grid" id="discoverGrid"></section>
+    </main>
 
-  
-  <footer class="site-footer"> 
-    
-    
+    <footer class="site-footer"> 
       <div>
         <p><strong>Timbuktu Chamber of Commerce</strong><br>
           10 Rue De La Paix<br>
-          Timbuktu, Mail 999<br>
+          Timbuktu, Mali 999<br>
           <a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a>
         </p>
       </div>
 
       <div class="social-icons">
-        <img src="images/youtube.webp" loading="lazy" alt="YouTube">
-        <img src="images/twitter.webp" loading="lazy" alt="Twitter">
-        <img src="images/facebook.webp" loading="lazy" alt="Facebook">
-        <img src="images/linkedin.webp" loading="lazy" alt="LinkedIn">
+        <a href="#" aria-label="YouTube"><img src="images/youtube.webp" loading="lazy" alt="YouTube"></a>
+        <a href="#" aria-label="Twitter"><img src="images/twitter.webp" loading="lazy" alt="Twitter"></a>
+        <a href="#" aria-label="Facebook"><img src="images/facebook.webp" loading="lazy" alt="Facebook"></a>
+        <a href="#" aria-label="LinkedIn"><img src="images/linkedin.webp" loading="lazy" alt="LinkedIn"></a>
       </div>
 
-   
-    <div class="footer-note">
-      <p>WDD231 Class Project | Anyalechi Chidiebere<br>
-        &copy; 20xx Timbuktu Chamber of Commerce<br>
-        Last Modified: <span id="last-modified"></span></p>
-    </div>
-  </footer>
+      <div class="footer-note">
+        <p>WDD231 Class Project | Anyalechi Chidiebere<br>
+          &copy; 20xx Timbuktu Chamber of Commerce<br>
+          Last Modified: <time id="last-modified"></time></p>
+      </div>
+    </footer>
 
+  </div>
 </body>
 </html>

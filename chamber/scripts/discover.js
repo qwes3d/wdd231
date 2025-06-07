@@ -1,23 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const grid = document.getElementById("discoverGrid");
-  fetch("data/discover.json")
-    .then(response => response.json())
-    .then(data => {
-      data.forEach((item, index) => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.style.gridArea = `item${index + 1}`;
-        card.innerHTML = `
-          <h2>${item.title}</h2>
-          <figure><img src="${item.image}" alt="${item.title}"></figure>
-          <address>${item.address}</address>
-          <p>${item.description}</p>
-          <button>Learn More</button>
-        `;
-        grid.appendChild(card);
-        setTimeout(() => card.classList.add("loaded"), 100 * index);
-      });
+  
+// Load and display discover items
+fetch("data/discover.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const grid = document.getElementById("discoverGrid");
+    data.items.forEach((item) => {
+      const card = document.createElement("div");
+      card.classList.add("discover-card");
+
+      card.innerHTML = `
+        <h2>${item.name}</h2>
+        <figure>
+          <img src="${item.image}" alt="${item.name}" loading="lazy">
+        </figure>
+        <address>${item.address}</address>
+        <p>${item.description}</p>
+        <button>Learn More</button>
+      `;
+
+      grid.appendChild(card);
     });
+  })
+  .catch((err) => {
+    console.error("Error loading JSON data:", err);
+  });
 
   // Visitor Message Logic
   const msg = document.getElementById("visitorMessage");
@@ -32,3 +39,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   localStorage.setItem("lastVisit", now);
 });
+
+

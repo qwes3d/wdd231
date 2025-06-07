@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "name": "Great Mosque of Djenné",
+      "image": "images/mosque.webp",
+      "address": "Djenné, Mali",
+      "description": "A UNESCO World Heritage site and the largest mud-brick building in the world, showcasing Sudano-Sahelian architecture."
+    },
+    {
+      "name": "Timbuktu Manuscripts Library",
+      "image": "images/library.webp",
+      "address": "Timbuktu, Mali",
+      "description": "A historical collection of ancient Islamic and African scholarly works preserved for centuries."
+    },
+    {
+      "name": "Sankoré University",
+      "image": "images/sankore.webp",
+      "address": "Sankoré District, Timbuktu",
+      "description": "One of the world’s oldest universities, renowned for Islamic scholarship in the 15th century."
+    },
+    {
+      "name": "Sidi Yahya Mosque",
+      "image": "images/sidiyahya.webp",
+      "address": "Timbuktu, Mali",
+      "description": "Built in the 15th century, this mosque reflects the city's spiritual and cultural heritage."
+    },
+    {
+      "name": "Ahmed Baba Institute",
+      "image": "images/ahmedbaba.webp",
+      "address": "Timbuktu, Mali",
+      "description": "A modern archive preserving thousands of manuscripts from Mali’s golden age."
+    },
+    {
+      "name": "Timbuktu Museum",
+      "image": "images/museum.webp",
+      "address": "Timbuktu, Mali",
+      "description": "Home to exhibitions of local artifacts, manuscripts, and historical relics from the Mali Empire."
+    },
+    {
+      "name": "Bou Djoudé Market",
+      "image": "images/market.webp",
+      "address": "Bou Djoudé, Timbuktu",
+      "description": "A lively open-air market offering traditional goods, crafts, and regional spices."
+    },
+    {
+      "name": "Sahara Desert Camp",
+      "image": "images/desertcamp.webp",
+      "address": "Timbuktu Outskirts",
+      "description": "Experience nomadic life with camel rides and overnight desert stays near Timbuktu."
+    }
+  ]
+}
