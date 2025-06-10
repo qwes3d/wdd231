@@ -51,16 +51,36 @@
   </header>
 
   <main>
-    <h2>About The Oval Marketplace</h2>
-    <p>
-      The Oval Marketplace is designed to help businesses showcase their products and services while providing users with a trusted directory of reliable companies. We also offer advertising spaces to help brands grow effectively.
-    </p>
+    <section>
+      <h2>Contact Us</h2>
+      <form id="contactForm" action="#" method="post" novalidate>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="formResult" role="alert" aria-live="assertive"></div>
+
+      
+    </section>
+
+    <section>
+      <h2>How to Join</h2>
+      <p>If you want your company listed on our marketplace, please contact us with your details and we will guide you through the process.</p>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 The Oval Marketplace. All rights reserved.</p>
+    <p>&copy; <span id="currentYear"></span> Global Online Marketplace. All rights reserved.</p>
+    <p id="lastModified"></p>
   </footer>
 
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="scripts/main.js" defer></script>
 </body>
 </html>
