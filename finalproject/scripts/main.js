@@ -1,200 +1,152 @@
-
-import { fetchWeather } from './weather.js';
-import { initModal } from './modal.js';
-
-// URLs for local JSON data (you will provide these JSON files)
-const PRODUCTS_JSON = './data/products.json';
-const COMPANIES_JSON = './data/companies.json';
-
-// DOM Elements
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-const currentYearEl = document.getElementById('currentYear');
-const lastModifiedEl = document.getElementById('lastModified');
-
-const productGrid = document.getElementById('productGrid');
-const adGrid = document.getElementById('adGrid');
-const companyGrid = document.getElementById('companyGrid');
-const weatherInfo = document.getElementById('weatherInfo');
-const searchBox = document.getElementById('searchBox');
-const contactForm = document.getElementById('contactForm');
-const formResult = document.getElementById('formResult');
-
 document.addEventListener('DOMContentLoaded', () => {
-  currentYearEl.textContent = new Date().getFullYear();
-  lastModifiedEl.textContent = `Last Modified: ${document.lastModified}`;
+  // --- Navigation toggle ---
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.main-nav');
+  if (hamburger && nav) {
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
 
-  // Navigation toggle
-  if (navToggle) {
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-      navToggle.setAttribute('aria-expanded', !expanded);
-      navMenu.classList.toggle('active');
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+      });
     });
   }
 
-  // Fetch and display weather if on index.html
-  if (weatherInfo) {
-    fetchWeather().then(data => {
-      weatherInfo.textContent = `${data.city}: ${data.description}, ${data.temp}°C`;
-    }).catch(() => {
-      weatherInfo.textContent = 'Weather data unavailable.';
+  // --- Last Modified Date ---
+  const lastModified = document.getElementById('last-modified');
+  if (lastModified) {
+    lastModified.textContent = document.lastModified;
+  }
+
+  // --- Keynote toggle ---
+  const keynoteBtn = document.getElementById('keynoteBtn');
+  const keynoteText = document.getElementById('keynoteText');
+  if (keynoteBtn && keynoteText) {
+    keynoteBtn.addEventListener('click', () => {
+      keynoteText.classList.toggle('show');
     });
   }
 
-  // Load products and ads on index page
-  if (productGrid && adGrid) {
-    loadProducts();
-    loadAds();
+  // --- Grid/List toggle for members ---
+  const membersContainer = document.getElementById("members");
+  const gridBtn = document.getElementById("gridView");
+  const listBtn = document.getElementById("listView");
+
+  if (gridBtn && listBtn && membersContainer) {
+    gridBtn.addEventListener("click", () => {
+      membersContainer.classList.add("grid-view");
+      membersContainer.classList.remove("list-view");
+    });
+
+    listBtn.addEventListener("click", () => {
+      membersContainer.classList.add("list-view");
+      membersContainer.classList.remove("grid-view");
+    });
   }
 
-  // Load companies on directory page
-  if (companyGrid) {
+  // --- Load product spotlight ---
+  async function loadSpotlights() {
+    try {
+      const response = await fetch("scripts/data/products.json");
+      const products = await response.json();
+
+      if (!Array.isArray(products) || products.length === 0) throw new Error("No products found");
+
+      const product = products[Math.floor(Math.random() * products.length)];
+      document.getElementById("spotlight-container").innerHTML = `
+        <div class="card spotlight-card">
+          <img src="${product.image}" alt="${product.name}" loading="lazy" />
+          <h3>${product.name}</h3>
+          <p>${product.description}</p>
+        </div>`;
+    } catch (error) {
+      console.error("Failed to load spotlight:", error);
+      document.getElementById("spotlight-container").textContent = "Unable to load featured product.";
+    }
+  }
+  loadSpotlights();
+
+  // --- Load advertisements ---
+  const adContainer = document.getElementById("advertisement-container");
+  if (adContainer) {
+    const loadingMessage = document.createElement("p");
+    loadingMessage.textContent = "Loading advertisements...";
+    loadingMessage.id = "ad-loading";
+    adContainer.parentElement.insertBefore(loadingMessage, adContainer);
+
+    fetch("scripts/data/ads.json")
+      .then(res => {
+        if (!res.ok) throw new Error("Failed to fetch ad data");
+        return res.json();
+      })
+      .then(ads => {
+        loadingMessage.hidden = true;
+        if (!ads.length) {
+          adContainer.innerHTML = "<p>No advertisements available at the moment.</p>";
+          return;
+        }
+        ads.forEach(ad => {
+          const card = document.createElement("div");
+          card.classList.add("ad-card");
+          card.innerHTML = `
+            <img src="${ad.image}" alt="${ad.name}" loading="lazy">
+            <h3>${ad.name}</h3>
+            <p>${ad.description}</p>
+            <a href="${ad.link}" class="ad-link" aria-label="Learn more about ${ad.title}">Learn more</a>
+          `;
+          adContainer.appendChild(card);
+        });
+      })
+      .catch(err => {
+        loadingMessage.hidden = true;
+        adContainer.innerHTML = `<p class="error">Error loading advertisements: ${err.message}</p>`;
+      });
+  }
+
+  // --- Load and display business companies ---
+  const companies = document.getElementById("companies");
+  if (companies) {
+    if (gridBtn && listBtn) {
+      gridBtn.addEventListener("click", () => {
+        companies.classList.add("grid-view");
+        companies.classList.remove("list-view");
+      });
+      listBtn.addEventListener("click", () => {
+        companies.classList.add("list-view");
+        companies.classList.remove("grid-view");
+      });
+    }
+
+    async function loadCompanies() {
+      try {
+        const response = await fetch("scripts/data/companies.json");
+        const data = await response.json();
+
+        data.forEach((company) => {
+          const card = document.createElement("article");
+          card.classList.add("company-card", company.membership);
+
+          card.innerHTML = `
+            <img src="${company.image}" alt="${company.name} Logo" loading="lazy" />
+            <h3>${company.name}</h3>
+            <p><strong>Address:</strong> ${company.address}</p>
+            <p><strong>Description:</strong> ${company.description}</p>
+            <p><strong>Email:</strong> <a href="mailto:${company.email}">${company.email}</a></p>
+            <p><strong>Membership:</strong> ${company.membership}</p>
+            <p><strong>Contact:</strong> ${company.contact}</p>
+            <p><strong>Phone:</strong> ${company.phone}</p>
+            <a href="${company.website}" target="_blank" rel="noopener">Visit Website</a>
+          `;
+
+          companies.appendChild(card);
+        });
+      } catch (err) {
+        companies.innerHTML = `<p class="error">Unable to load companies: ${err.message}</p>`;
+      }
+    }
+
     loadCompanies();
   }
-
-  // Search functionality on products
-  if (searchBox) {
-    searchBox.addEventListener('input', (e) => {
-      filterProducts(e.target.value);
-    });
-  }
-
-  // Contact form submission
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      handleFormSubmit();
-    });
-  }
-
-  // Initialize modal dialogs
-  initModal();
 });
-
-// Fetch products.json and display first 15 products
-async function loadProducts() {
-  try {
-    const response = await fetch(PRODUCTS_JSON);
-    if (!response.ok) throw new Error('Products fetch failed');
-    const data = await response.json();
-    displayProducts(data.products.slice(0, 15));
-    localStorage.setItem('lastProducts', JSON.stringify(data.products));
-  } catch (error) {
-    productGrid.textContent = 'Failed to load products.';
-  }
-}
-
-function displayProducts(products) {
-  productGrid.innerHTML = products.map(p => `
-    <article class="product-card" tabindex="0" aria-label="Product: ${p.name}">
-      <img src="${p.image}" alt="${p.name} image" loading="lazy" />
-      <h3 class="product-name">${p.name}</h3>
-      <p class="price">Price: $${p.price.toFixed(2)}</p>
-      <p>${p.description}</p>
-      <button class="details-btn" data-id="${p.id}" aria-haspopup="dialog" aria-controls="modal">Details</button>
-    </article>
-  `).join('');
-  attachProductDetailsListeners();
-}
-
-function attachProductDetailsListeners() {
-  const detailButtons = document.querySelectorAll('.details-btn');
-  detailButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const productId = e.target.dataset.id;
-      openModalWithProduct(productId);
-    });
-  });
-}
-
-function filterProducts(searchTerm) {
-  let products = [];
-  try {
-    products = JSON.parse(localStorage.getItem('lastProducts')) || [];
-  } catch {
-    products = [];
-  }
-  const filtered = products.filter(p =>
-    p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    p.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-  displayProducts(filtered.slice(0, 15));
-}
-
-// Load company ads into adGrid (first 5 companies)
-async function loadAds() {
-  try {
-    const response = await fetch(COMPANIES_JSON);
-    if (!response.ok) throw new Error('Companies fetch failed');
-    const data = await response.json();
-    adGrid.innerHTML = data.companies.slice(0, 5).map(c => `
-      <article class="ad-card" tabindex="0" aria-label="Advertisement: ${c.name}">
-        <img src="${c.logo}" alt="${c.name} logo" loading="lazy" />
-        <h3 class="company-name">${c.name}</h3>
-        <p>${c.description}</p>
-        <a href="${c.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
-      </article>
-    `).join('');
-  } catch {
-    adGrid.textContent = 'Failed to load ads.';
-  }
-}
-
-// Load companies for directory page
-async function loadCompanies() {
-  try {
-    const response = await fetch(COMPANIES_JSON);
-    if (!response.ok) throw new Error('Companies fetch failed');
-    const data = await response.json();
-    companyGrid.innerHTML = data.companies.map(c => `
-      <article class="company-card" tabindex="0" aria-label="Company: ${c.name}">
-        <img src="${c.logo}" alt="${c.name} logo" loading="lazy" />
-        <h3 class="company-name">${c.name}</h3>
-        <p>${c.description}</p>
-        <p><strong>Contact:</strong> ${c.contact}</p>
-        <p><strong>Phone:</strong> ${c.phone}</p>
-        <p><strong>Email:</strong> <a href="mailto:${c.email}">${c.email}</a></p>
-        <a href="${c.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
-      </article>
-    `).join('');
-  } catch {
-    companyGrid.textContent = 'Failed to load companies.';
-  }
-}
-
-// Handle contact form submit
-function handleFormSubmit() {
-  const formData = new FormData(contactForm);
-  const name = formData.get('name').trim();
-  const email = formData.get('email').trim();
-  const message = formData.get('message').trim();
-
-  if (!name || !email || !message) {
-    formResult.textContent = 'Please fill in all fields.';
-    formResult.style.color = 'red';
-    return;
-  }
-
-  // Simulate sending form data...
-  setTimeout(() => {
-    formResult.textContent = `Thank you, ${name}! Your message has been sent.`;
-    formResult.style.color = 'green';
-    contactForm.reset();
-  }, 500);
-}
-
-// Modal functionality (see modal.js for details)
-function openModalWithProduct(productId) {
-  // Use modal.js exported method
-  import('./modal.js').then(({ openModal }) => {
-    let products = [];
-    try {
-      products = JSON.parse(localStorage.getItem('lastProducts')) || [];
-    } catch {
-      products = [];
-    }
-    const product = products.find(p => p.id === productId);
-    if (product) openModal(product);
-  });
-}

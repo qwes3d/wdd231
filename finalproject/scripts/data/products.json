@@ -1,5 +1,4 @@
-{
-  "products": [
+ [
     {
       "id": "p1",
       "name": "Excavator",
@@ -54,4 +53,3 @@
 
 
   ]
-}

@@ -1,39 +1,210 @@
-/* Responsive styles /
-@media (min-width: 600px) {
-/ Navigation horizontal */
-#navToggle {
-display: none;
-}
-.nav-menu {
-display: flex !important;
-position: static;
-flex-direction: row;
-gap: 1rem;
-background: transparent;
-width: auto;
-}
-.nav-menu li {
-border: none;
-}
-.nav-menu li a {
-padding: 0;
-color: white;
-}
-.nav-menu li a:hover,
-.nav-menu li a[aria-current="page"] {
-background: transparent;
-text-decoration: underline;
+/* style.css */
+@media screen and (min-width: 749px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 1rem 2rem;
+    position: relative;
+  }
+
+  .logo-area {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+     justify-content: flex-start;
+  }
+
+  .logo {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+  }
+
+  .main-nav ul {
+    display: flex !important;
+    flex-direction: row;
+     position: static;
+    background-color: transparent;
+      justify-content: flex-end;
+    gap: 1rem;
+    width: auto;
+    box-shadow: none;
+  }
+
+  .main-nav li {
+    margin: 0 0.5rem;
+  }
+
+  .main-nav a {
+    padding: 0.75rem 1.5rem;
+    color: inherit;
+  }
+
+  .main-nav a:hover {
+    background-color: #444;
+    color: white;
+    border-radius: 4px;
+  }
+
+.hero-image {
+  width: 100%;
+  height: auto;
 }
 
-/* Grid layouts */
-#productGrid,
-#adGrid,
-#companyGrid {
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .info-section {
+    display: grid;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+  }
+
+  .business-directory {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  }
+
+  .card {
+    flex: 1 1 calc(33.33% - 2rem);
+    margin: 1rem;
+  }
+
+  /* Footer grid layout for large screens */
+ footer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #263238;
+  color: white;
+  align-items: center;
+  text-align: left;
+ }
+
+ footer a {
+  color: white;
+  text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-logo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+ }
+
+.footer-info {
+  font-size: 0.95rem;
+  line-height: 1.0;
+  text-align: left;
+  }
+  .footer-info p {
+    margin: 0;
+  }
+/* Center social icons below */
+.social-icons {
+ display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+ }
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  margin: 0 0.5rem;
 }
 
-.product-card,
-.ad-card,
-.company-card {
-max-width: 300px;
+/* Footer note at the bottom */
+.footer-note {
+  text-align: right;
+  font-size: 0.9rem;
+color: #ccc;
+}
+
+#members {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+  section.current-event,
+  section.weather,
+  section.spotlights {
+    max-width: 900px;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .join-btn {
+  background-color: #005f73;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.join-btn:hover {
+  background-color: #0a9396;
+  transform: scale(1.05);
+}
+
+
+
+  /* Place weather in bottom right of hero image */
+  .hero {
+    position: relative;
+  }
+
+  section.weather {
+    position: absolute;
+    bottom: 6rem;
+    right: 1rem;
+    width: 140px;
+    height: 300px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .weather h2::after {
+    content: " ⛅"; /* Large screen weather icon as pseudo-element */
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+
+
+  #companies.grid-view {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+
+
+
+  @media (min-width: 600px) {
+  .advertisement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .advertisement-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

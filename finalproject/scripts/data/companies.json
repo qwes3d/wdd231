@@ -1,5 +1,4 @@
-{
-  "companies": [
+[
     {
       "name": "Ghana Builders Ltd",
       "description": "Leading construction material supplier in Ghana.",
@@ -17,6 +16,126 @@
       "email": "info@accraequipment.com",
       "website": "https://accraequipment.com",
       "logo": "images/accraequipment_logo.png"
-    }
-  ]
-}
+    },
+   {
+    "name": "GreenFarm Exporters",
+    "description": "Agricultural exports from Ghana and beyond",
+    "logo": "images/company1.png",
+    "website": "https://greenfarm.com"
+   },
+    {
+    "name": "Crafts United",
+    "description": "Handmade goods for international markets",
+    "logo": "images/company2.png",
+    "website": "https://craftsunited.org"
+   },
+{
+    "name": "Tech Innovators",
+    "description": "Leading tech solutions provider in West Africa",
+    "logo": "images/company3.png",
+    "website": "https://techinnovators.com"
+   },
+   {
+    "name": "EcoEnergy Solutions",
+    "description": "Renewable energy solutions for a sustainable future",
+    "logo": "images/company4.png",
+    "website": "https://ecoenergysolutions.com"
+   },
+{
+    "name": "HealthPlus Pharmaceuticals",
+    "description": "Pharmaceuticals and healthcare products",
+    "logo": "images/company5.png",
+    "website": "https://healthpluspharma.com"
+   },
+   {
+    "name": "EduTech Learning",
+    "description": "Innovative educational technology solutions",
+    "logo": "images/company6.png",
+    "website": "https://edutechlearning.com"
+   },
+{
+    "name": "TravelGhana Tours",
+    "description": "Tourism and travel services in Ghana",
+    "logo": "images/company7.png",
+    "website": "https://travelghana.com"
+   },
+   {
+    "name": "FashionHub Ghana",
+    "description": "Fashion and apparel retailer",
+    "logo": "images/company8.png",
+    "website": "https://fashionhubghana.com"
+   },
+{
+    "name": "FinTech Solutions",
+    "description": "Financial technology services for businesses",
+    "logo": "images/company9.png",
+    "website": "https://fintechsolutions.com"
+   },
+   {
+    "name": "SmartHome Innovations",
+    "description": "Smart home technology and automation",
+    "logo": "images/company10.png",
+    "website": "https://smarthomeinnovations.com"
+   },
+{
+    "name": "Logistics Masters",
+    "description": "Logistics and supply chain management",
+    "logo": "images/company11.png",
+    "website": "https://logisticsmasters.com"
+   },
+   {
+    "name": "Culinary Delights",
+    "description": "Gourmet food products and catering services",
+    "logo": "images/company12.png",
+    "website": "https://culinarydelights.com"
+   },
+{
+    "name": "Artisan Crafts Co.",
+    "description": "Local crafts and handmade products",
+    "logo": "images/company13.png",
+    "website": "https://artisancraftsco.com"
+   },
+   {
+    "name": "Urban Realty",
+    "description": "Real estate and property management",
+    "logo": "images/company14.png",
+    "website": "https://urbanrealty.com"
+   },
+{
+    "name": "Digital Marketing Pros",
+    "description": "Digital marketing and advertising services",
+    "logo": "images/company15.png",
+    "website": "https://digitalmarketingpros.com"
+   },
+   {
+    "name": "GreenTech Innovations",
+    "description": "Sustainable technology solutions",
+    "logo": "images/company16.png",
+    "website": "https://greentechinnovations.com"
+   },
+{
+    "name": "HealthFirst Clinics",
+    "description": "Healthcare services and clinics",
+    "logo": "images/company17.png",
+    "website": "https://healthfirstclinics.com"
+   },
+   {
+    "name": "Ghanaian Art Gallery",
+    "description": "Showcasing local art and culture",
+    "logo": "images/company18.png",
+    "website": "https://ghanaianartgallery.com"
+   },
+{
+    "name": "EcoTravel Adventures",
+    "description": "Eco-friendly travel and adventure tours",
+    "logo": "images/company19.png",
+    "website": "https://ecotraveladventures.com"
+   },
+   {
+    "name": "TechSavvy Solutions",
+    "description": "IT solutions and consulting services",
+    "logo": "images/company20.png",
+    "website": "https://techsavvysolutions.com"
+   }
+]
+

@@ -1,18 +1,17 @@
-const API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY';
-const CITY = 'Accra,GH';
-
+// weather.js
 export async function fetchWeather() {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&units=metric&appid=${API_KEY}`;
-  try {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error('Weather fetch failed');
-    const data = await response.json();
-    return {
-      city: data.name,
-      temp: Math.round(data.main.temp),
-      description: data.weather[0].description
-    };
-  } catch (error) {
-    throw error;
-  }
+  const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
+  const city = 'Accra';
+  const response = await fetch(
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+  );
+
+  if (!response.ok) throw new Error("Weather fetch failed");
+  const data = await response.json();
+  return {
+    city: data.name,
+    temp: Math.round(data.main.temp),
+    description: data.weather[0].description,
+    icon: data.weather[0].icon
+  };
 }

@@ -1,0 +1,67 @@
+[
+    {
+      "name": "Ghana Textiles Co.",
+      "description": "Authentic African Prints for Export",
+      "image": "images/ad1.jpg"
+    },
+    {
+      "name": "SolarTech Ltd.",
+      "description": "Affordable Solar for Rural Areas",
+      "image": "images/ad2.jpg"
+    },
+    {
+      "name": "EcoPack Ghana",
+      "description": "Biodegradable Packaging Solutions",
+      "image": "images/ad3.jpg"
+    },
+    {
+      "name": "AgroTech Innovations",
+      "description": "Smart Farming Solutions for Africa",
+      "image": "images/ad4.jpg"
+    },
+    {
+      "company": "Local Artisans Network",
+      "description": "Connecting Craftsmen with Global Markets",
+      "image": "images/ad5.jpg"
+    },
+    {
+      "name": "Handmade Basket",
+      "description": "$25 - Made from local bamboo",
+      "image": "images/product1.jpg"
+    },
+    {
+      "name": "Organic Shea Butter",
+      "description": "$10 - 100% natural",
+      "image": "images/product2.jpg"
+    },
+    {
+      "name": "Kente Cloth",
+      "description": "$50 - Authentic Ghanaian textile",
+      "image": "images/product3.jpg"
+    },
+    {
+      "name": "Wooden Carvings",
+      "description": "$30 - Handcrafted by local artisans",
+      "image": "images/product4.jpg"
+    },
+    {
+      "name": "Traditional Beads",
+      "description": "$15 - Made from recycled materials",
+      "image": "images/product5.jpg"
+    },
+    {
+      "name": "Clay Pottery",
+      "description": "$20 - Unique designs",
+      "image": "images/product6.jpg"
+    },
+    {
+      "name": "Leather Sandals",
+      "description": "$40 - Hand-stitched quality",
+      "image": "images/product7.jpg"
+    },
+    {
+      "name": "Batik Fabric",
+      "description": "$35 - Vibrant colors",
+      "image": "images/product8.jpg"
+    }
+  ]
