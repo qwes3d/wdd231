@@ -1,0 +1,229 @@
+/* responsive.css – Tablets & Desktops (min-width: 768px) */
+@media screen and (min-width: 768px), (min-width: 1024px) {
+  body {
+    padding: 2rem;
+  }
+
+  .header-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+    background: none;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: left;
+    padding: 3rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  
+  .hero p {
+    font-size: 1.125rem;
+  }
+
+  .hero-image {
+    max-width: 600px;
+     height: auto;
+  margin: 0 auto 1rem auto;
+  display: block;
+  object-fit: contain;
+}
+ .hero .cta {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  .hero.cta:hover {
+    background-color: var(--accent-color-hover);
+  }
+
+  .featured-products {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 960px;
+    margin: 0 auto 2rem;
+  }
+
+  .features-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .features-items.h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color-scheme: light dark;
+    color: var(--primary-color);
+    background-color: aqua;
+  }
+
+  .features {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+  }
+
+  .our_services, .how_we_work {
+    text-align: center;
+  }
+  .our_services.h2, .how_we_work h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color-scheme: light dark;
+    color: var(--primary-color);
+    background-color: aqua;
+  }
+
+  /*about us*/
+  .about_intro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .about_intro h2, .mission h2, .vision h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    color-scheme: light dark;
+    text-align: center;
+  }
+  .vision, .mission, .about_intro p {
+    
+    text-align: center;
+  }
+  .contact_intro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .contact-form-wrapper {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    font-size: larger;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .testimonial-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .author {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  .author:hover {
+    color: var(--accent-color);
+    
+  }
+  #product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .modal-content {
+    max-width: 600px;
+  }
+
+  .product-card img {
+    height: 160px;
+  }
+
+  /*quote */
+
+    section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #004080;
+    }
+
+    section p {
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    input, textarea {
+      font-size: 1rem;
+      padding: 0.75rem;
+      margin-top: 0.25rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button[type="submit"] {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      align-self: start;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #002f66;
+    } 
+
+
+}
