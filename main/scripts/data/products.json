@@ -4,21 +4,21 @@
       "category": "fashion",
       "description": "High-performance electric cement mixer for efficient mixing.",
       "price": 1200,
-      "image": "images/dress.WEBP"
+      "image": "images/dress.webp"
     },
     {
       "name": "JACKET",
       "category": "fashion",
       "description": "High-quality concrete blocks for construction and masonry work.",
       "price": 600,
-      "image": "images/jacket.WEBP"
+      "image": "images/jacket.webp"
     },
     {
       "name": "SHOES",
       "category":"footwear",
       "description":" high quality leader product",
       "price": 400,
-      "image": "images/shoe.WEBP"
+      "image": "images/shoe.webp"
 
     },
     {
@@ -33,7 +33,7 @@
       "category": "Construction Equipment",
       "description": "Efficient electric concrete mixer for small and large projects.",
       "price": 1500,
-      "image": "images/concrete.WEBP"
+      "image": "images/concrete.webp"
     },
     
     {
@@ -41,7 +41,7 @@
       "category": "home appliances",
       "description": "Versatile power drill for various construction tasks.",
       "price": 3800,
-      "image": "images/tv.WEBP"
+      "image": "images/tv.webp"
     },
     
     {
@@ -49,49 +49,49 @@
       "category": "technology",
       "description": "Versatile power drill for various construction tasks.",
       "price": 800,
-      "image": "images/iphone.WEBP"
+      "image": "images/iphone.webp"
     },
     {
       "name": "formwork",
       "category": "Building Materials",
       "description": "High-quality formwork for concrete structures.",
       "price": 800,
-      "image": "images/formwork.WEBP"
+      "image": "images/formwork.webp"
     },
     {
       "name": "AIR HUMUDIFIER",
       "category": "home appliances",
       "description": "High-quality steel rods for reinforced concrete structures.",
       "price": 250,
-      "image": "images/humidifier.WEBP"
+      "image": "images/humidifier.webp"
     },
     {
       "name": "Wheelbarrow",
       "category": "Construction Equipment",
       "description": "Heavy-duty wheelbarrow for transporting materials on-site.",
       "price": 300,
-      "image": "images/wheelbarrow.WEBP"
+      "image": "images/wheelbarrow.webp"
     },
     {
       "name": "Cement Bags",
       "category": "Building Materials",
       "description": "Durable cement bags for all your concrete work.",
       "price": 120,
-      "image": "images/cement.WEBP"
+      "image": "images/cement.webp"
     },
     {
       "name": "Safety Helmet",
       "category": "Personal Protective Equipment",
       "description": "Comfortable and durable safety helmet for construction workers.",
       "price": 50,
-      "image": "images/safety-helmet.WEBP"
+      "image": "images/safety-helmet.webp"
     },
     {
       "name": "Power Drill",
       "category": "Power Tools",
       "description": "Versatile power drill for various construction tasks.",
       "price": 800,
-      "image": "images/power-drill.WEBP"
+      "image": "images/power-drill.webp"
     },
     
     {
@@ -99,7 +99,7 @@
       "category": "technology",
       "description": "Versatile power drill for various construction tasks.",
       "price": 8000,
-      "image": "images/lappy.WEBP"
+      "image": "images/lappy.webp"
     },
     
     {
@@ -107,97 +107,97 @@
       "category": "home appliances",
       "description": "Versatile power drill for various construction tasks.",
       "price": 800,
-      "image": "images/microwave.WEBP"
+      "image": "images/microwave.webp"
     },
     {
       "name": "Ladder",
       "category": "Construction Equipment",
       "description": "Sturdy ladder for reaching high places safely.",
       "price": 400,
-      "image": "images/ladder.WEBP"
+      "image": "images/ladder.webp"
     },
     {
       "name": "Safety Gloves",
       "category": "Personal Protective Equipment",
       "description": "Protective gloves for handling materials safely.",
       "price": 30,
-      "image": "images/safety-gloves.WEBP"
+      "image": "images/safety-gloves.webp"
     },
     {
       "name": "Concrete Vibrator",
       "category": "Construction Equipment",
       "description": "Electric concrete vibrator for compacting concrete effectively.",
       "price": 1200,
-      "image": "images/concrete-vibrator.WEBP"
+      "image": "images/concrete-vibrator.webp"
     },
     {
       "name": "Brick Trowel",
       "category": "Hand Tools",
       "description": "Essential tool for masonry work and brick laying.",
       "price": 70,
-      "image": "images/brick-trowel.WEBP"
+      "image": "images/brick-trowel.webp"
     },
     {
       "name": "Drill Bits",
       "category": "Power Tools",
       "description": "Set of high-quality drill bits for various materials.",
       "price": 150,
-      "image": "images/drill-bits.WEBP"
+      "image": "images/drill-bits.webp"
     },
     {
       "name": "FRIDGE",
       "category": "home appliances",
       "description": "Powerful concrete saw for cutting through tough materials.",
       "price": 2000,
-      "image": "images/fridge.WEBP"
+      "image": "images/fridge.webp"
     },
     {
       "name": "Safety Goggles",
       "category": "Personal Protective Equipment",
       "description": "Protective goggles for eye safety on construction sites.",
       "price": 40,
-      "image": "images/safety-goggles.WEBP"
+      "image": "images/safety-goggles.webp"
     },
     {
       "name": "Measuring Tape",
       "category": "Hand Tools",
       "description": "Durable measuring tape for accurate measurements.",
       "price": 25,
-      "image": "images/measuring-tape.WEBP"
+      "image": "images/measuring-tape.webp"
     },
     {
       "name": "Electric Jackhammer",
       "category": "Power Tools",
       "description": "Heavy-duty electric jackhammer for breaking concrete.",
       "price": 3500,
-      "image": "images/eletric-jackhammer.WEBP"
+      "image": "images/eletric-jackhammer.webp"
     },
     {
       "name": "Constructicon Boots",
       "category": "Personal Protective Equipment",
       "description": "Sturdy construction boots for safety and comfort.",
       "price": 200,
-      "image": "images/construction-boots.WEBP"
+      "image": "images/construction-boots.webp"
     },
     {
       "name": "Portable Generator",
       "category": "Power Tools",
       "description": "Reliable portable generator for power supply on-site.",
       "price": 2500,
-      "image": "images/portable-generator.WEBP"
+      "image": "images/portable-generator.webp"
     },
     {
       "name": "Concrete Finishing Trowel",
       "category": "Hand Tools",
       "description": "Essential tool for finishing concrete surfaces.",
       "price": 90,
-      "image": "images/concrete-finishing-trowel.WEBP"
+      "image": "images/concrete-finishing-trowel.webp"
     },
     {
       "name": "Electric Stove",
       "category": "home appliances",
       "description": "High-quality chippings stone for construction projects.",
       "price": 100,
-      "image": "images/electric_stove.WEBP"
+      "image": "images/electric_stove.webp"
     }
 ]
