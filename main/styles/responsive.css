@@ -24,39 +24,35 @@
 
   header h1 {
     font-size: 2.5rem;
-  }
-.hero {
+  }/* Large Screen Styles */
+@media (min-width: 768px) {
+  .hero {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-between;
     text-align: left;
-    padding: 3rem;
+    padding: 2rem 4rem;
+  }
+
+  .hero-image {
+    width: 50%;
+    max-width: 500px;
+    margin-right: 2rem;
   }
 
   .hero h2 {
     font-size: 2rem;
   }
 
-  
   .hero p {
     font-size: 1.125rem;
   }
 
-  .hero-image {
-    max-width: 600px;
-     height: auto;
-  margin: 0 auto 1rem auto;
-  display: block;
-  object-fit: contain;
+  .hero > *:not(.hero-image) {
+    flex: 1;
+  }
 }
- .hero .cta {
-    padding: 1rem 2rem;
-    font-size: 1rem;
-  }
-  .hero.cta:hover {
-    background-color: var(--accent-color-hover);
-  }
+
 
   .featured-products {
     grid-template-columns: repeat(3, 1fr);
