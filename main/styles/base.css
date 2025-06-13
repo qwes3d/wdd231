@@ -101,38 +101,47 @@ nav a:hover {
 }
 
 /* Hero */
+/* Base Styles (Mobile First) */
 .hero {
+  padding: 1rem;
   text-align: center;
-  padding: 2rem 1rem;
-  background: #ecf0f1;
-  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 1rem;
 }
 
 .hero h2 {
   font-size: 1.5rem;
-  color: var(--primary-color);
+  margin-bottom: 0.5rem;
 }
 
-.hero .cta {
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: var(--accent-color);
-  color: rgb(15, 2, 2);
+  font-size: 1rem;
+  background-color: #2a2a72;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
   border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
-
-.hero-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  margin: 0 auto 1rem auto;
-  display: block;
-  object-fit: contain;
+.cta:hover {
+  background-color: #1a1a50;
 }
+
 
 h2 {
   font-size: 1.5rem;
