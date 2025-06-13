@@ -1,17 +1,32 @@
 [
     {
-      "name": "Cement Mixer",
-      "category": "Construction Equipment",
+      "name": "CLOTHES UNISEX",
+      "category": "fashion",
       "description": "High-performance electric cement mixer for efficient mixing.",
       "price": 1200,
-      "image": "images/cement-mixer.WEBP"
+      "image": "images/dress.WEBP"
     },
     {
-      "name": "Concrete Blocks",
-      "category": "Building Materials",
+      "name": "JACKET",
+      "category": "fashion",
+      "description": "High-quality concrete blocks for construction and masonry work.",
+      "price": 600,
+      "image": "images/jacket.WEBP"
+    },
+    {
+      "name": "SHOES",
+      "category":"footwear",
+      "description":" high quality leader product",
+      "price": 400,
+      "image": "images/shoe.WEBP"
+
+    },
+    {
+      "name": "CLOTHE",
+      "category": "fashion",
       "description": "Durable concrete blocks for construction and masonry work.",
       "price": 500,
-      "image": "images/concrete-blocks.WEBP"
+      "image": "images/all.WEBP"
     },
     {
       "name": "Concrete Mixer",
@@ -19,6 +34,22 @@
       "description": "Efficient electric concrete mixer for small and large projects.",
       "price": 1500,
       "image": "images/concrete.WEBP"
+    },
+    
+    {
+      "name": "TELEVISION",
+      "category": "home appliances",
+      "description": "Versatile power drill for various construction tasks.",
+      "price": 3800,
+      "image": "images/tv.WEBP"
+    },
+    
+    {
+      "name": "IPHONE",
+      "category": "technology",
+      "description": "Versatile power drill for various construction tasks.",
+      "price": 800,
+      "image": "images/iphone.WEBP"
     },
     {
       "name": "formwork",
@@ -28,11 +59,11 @@
       "image": "images/formwork.WEBP"
     },
     {
-      "name": "Steel Rods",
-      "category": "Building Materials",
+      "name": "AIR HUMUDIFIER",
+      "category": "home appliances",
       "description": "High-quality steel rods for reinforced concrete structures.",
       "price": 250,
-      "image": "images/rebar.WEBP"
+      "image": "images/humidifier.WEBP"
     },
     {
       "name": "Wheelbarrow",
@@ -61,6 +92,22 @@
       "description": "Versatile power drill for various construction tasks.",
       "price": 800,
       "image": "images/power-drill.WEBP"
+    },
+    
+    {
+      "name": "LAPTOP",
+      "category": "technology",
+      "description": "Versatile power drill for various construction tasks.",
+      "price": 8000,
+      "image": "images/lappy.WEBP"
+    },
+    
+    {
+      "name": "MICROWAVE",
+      "category": "home appliances",
+      "description": "Versatile power drill for various construction tasks.",
+      "price": 800,
+      "image": "images/microwave.WEBP"
     },
     {
       "name": "Ladder",
@@ -98,11 +145,11 @@
       "image": "images/drill-bits.WEBP"
     },
     {
-      "name": "Concrete Saw",
-      "category": "Power Tools",
+      "name": "FRIDGE",
+      "category": "home appliances",
       "description": "Powerful concrete saw for cutting through tough materials.",
       "price": 2000,
-      "image": "images/concrete-saw.WEBP"
+      "image": "images/fridge.WEBP"
     },
     {
       "name": "Safety Goggles",
@@ -147,10 +194,10 @@
       "image": "images/concrete-finishing-trowel.WEBP"
     },
     {
-      "name": "chippings stone",
-      "category": "Building Materials",
+      "name": "Electric Stove",
+      "category": "home appliances",
       "description": "High-quality chippings stone for construction projects.",
       "price": 100,
-      "image": "images/stones.WEBP"
+      "image": "images/electric_stove.WEBP"
     }
 ]

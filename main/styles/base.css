@@ -237,6 +237,7 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+
 /* Consistent Layout */
 .container {
   max-width: 1200px;
@@ -248,6 +249,23 @@ footer {
 body {
   overflow-x: hidden;
 }
+
+section {
+  text-align: center;
+  padding: 1rem;
+}
+
+.logo-area {
+  width: 100%;
+}
+
+.logo-area .logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .product-card img {
   width: 100%;
   height: auto;
