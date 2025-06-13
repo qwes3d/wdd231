@@ -51,7 +51,7 @@
   .hero > *:not(.hero-image) {
     flex: 1;
   }
-}
+
 
 
   .featured-products {
