@@ -2,14 +2,14 @@
     {
       "name": "CLOTHES UNISEX",
       "category": "fashion",
-      "description": "High-performance electric cement mixer for efficient mixing.",
+      "description": "High-quality fabrics.",
       "price": 1200,
       "image": "images/dress.webp"
     },
     {
       "name": "JACKET",
       "category": "fashion",
-      "description": "High-quality concrete blocks for construction and masonry work.",
+      "description": "High-quality wear.",
       "price": 600,
       "image": "images/jacket.webp"
     },
@@ -24,7 +24,7 @@
     {
       "name": "CLOTHE",
       "category": "fashion",
-      "description": "Durable concrete blocks for construction and masonry work.",
+      "description": "Durable and long-lasting.",
       "price": 500,
       "image": "images/all.webp"
     },
@@ -39,7 +39,7 @@
     {
       "name": "TELEVISION",
       "category": "home appliances",
-      "description": "Versatile power drill for various construction tasks.",
+      "description": "view the world around you.",
       "price": 3800,
       "image": "images/tv.webp"
     },
@@ -47,7 +47,7 @@
     {
       "name": "IPHONE",
       "category": "technology",
-      "description": "Versatile power drill for various construction tasks.",
+      "description": "the best mobile technolgy.",
       "price": 800,
       "image": "images/iphone.webp"
     },
@@ -61,7 +61,7 @@
     {
       "name": "AIR HUMUDIFIER",
       "category": "home appliances",
-      "description": "High-quality steel rods for reinforced concrete structures.",
+      "description": "refreshness never felt so good.",
       "price": 250,
       "image": "images/humidifier.webp"
     },
@@ -97,7 +97,7 @@
     {
       "name": "LAPTOP",
       "category": "technology",
-      "description": "Versatile power drill for various construction tasks.",
+      "description": "easy carrying, portable and long battery life.",
       "price": 8000,
       "image": "images/lappy.webp"
     },
@@ -105,7 +105,7 @@
     {
       "name": "MICROWAVE",
       "category": "home appliances",
-      "description": "Versatile power drill for various construction tasks.",
+      "description": "user friendly, light weight.",
       "price": 800,
       "image": "images/microwave.webp"
     },
@@ -147,7 +147,7 @@
     {
       "name": "FRIDGE",
       "category": "home appliances",
-      "description": "Powerful concrete saw for cutting through tough materials.",
+      "description": "low power consumption, efficient.",
       "price": 2000,
       "image": "images/fridge.webp"
     },
