@@ -8,6 +8,12 @@
   --font-alt: 'Montserrat', sans-serif;
 }
 
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 * {
   margin: 0;
   padding: 0;
