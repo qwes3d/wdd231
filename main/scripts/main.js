@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div");
       card.className = "product-card";
       card.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
+        <img src="${product.image}" alt="${product.name}" loading ="lazyloading">
         <h4>${product.name}</h4>
         <p>${product.category}</p>
         <p><strong>₵${product.price}</strong></p>
